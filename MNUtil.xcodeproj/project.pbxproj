@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BDCE5A64F9078FA9AEAED58 /* libPods-MNUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */; };
 		958367071D8F8E0C005E5E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367061D8F8E0C005E5E9A /* main.m */; };
 		9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367091D8F8E0C005E5E9A /* AppDelegate.m */; };
 		9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583670C1D8F8E0C005E5E9A /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */; };
 		958367201D8F8E0C005E5E9A /* MNUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583671F1D8F8E0C005E5E9A /* MNUtilTests.m */; };
 		9583672B1D8F8E0C005E5E9A /* MNUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */; };
+		9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367391D8F8E37005E5E9A /* MNUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.release.xcconfig"; sourceTree = "<group>"; };
+		8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNUtil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958367021D8F8E0C005E5E9A /* MNUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958367061D8F8E0C005E5E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		958367081D8F8E0C005E5E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +55,9 @@
 		958367261D8F8E0C005E5E9A /* MNUtilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNUtilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNUtilUITests.m; sourceTree = "<group>"; };
 		9583672C1D8F8E0D005E5E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958367381D8F8E37005E5E9A /* MNUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUtil.h; sourceTree = "<group>"; };
+		958367391D8F8E37005E5E9A /* MNUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNUtil.m; sourceTree = "<group>"; };
+		FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BDCE5A64F9078FA9AEAED58 /* libPods-MNUtil.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243EE80B4AFD7B681E33B98F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */,
+				137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63010548C76D1886BB3B07C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		958366F91D8F8E0C005E5E9A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +110,8 @@
 				9583671E1D8F8E0C005E5E9A /* MNUtilTests */,
 				958367291D8F8E0C005E5E9A /* MNUtilUITests */,
 				958367031D8F8E0C005E5E9A /* Products */,
+				243EE80B4AFD7B681E33B98F /* Pods */,
+				63010548C76D1886BB3B07C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +128,8 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
+				958367381D8F8E37005E5E9A /* MNUtil.h */,
+				958367391D8F8E37005E5E9A /* MNUtil.m */,
 				958367081D8F8E0C005E5E9A /* AppDelegate.h */,
 				958367091D8F8E0C005E5E9A /* AppDelegate.m */,
 				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
@@ -147,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9583672F1D8F8E0D005E5E9A /* Build configuration list for PBXNativeTarget "MNUtil" */;
 			buildPhases = (
+				8F3697ED970047204EB0C581 /* [CP] Check Pods Manifest.lock */,
 				958366FE1D8F8E0C005E5E9A /* Sources */,
 				958366FF1D8F8E0C005E5E9A /* Frameworks */,
 				958367001D8F8E0C005E5E9A /* Resources */,
+				224C09C60ED54F9D2058320B /* [CP] Embed Pods Frameworks */,
+				98E6D429423151F38A1AB28D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +303,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		224C09C60ED54F9D2058320B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3697ED970047204EB0C581 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98E6D429423151F38A1AB28D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		958366FE1D8F8E0C005E5E9A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +359,7 @@
 				9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */,
 				9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */,
 				958367071D8F8E0C005E5E9A /* main.m in Sources */,
+				9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +504,7 @@
 		};
 		958367301D8F8E0D005E5E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5WPH96WKVE;
@@ -435,6 +517,7 @@
 		};
 		958367311D8F8E0D005E5E9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5WPH96WKVE;
@@ -514,6 +597,7 @@
 				958367311D8F8E0D005E5E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		958367321D8F8E0D005E5E9A /* Build configuration list for PBXNativeTarget "MNUtilTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +606,7 @@
 				958367341D8F8E0D005E5E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		958367351D8F8E0D005E5E9A /* Build configuration list for PBXNativeTarget "MNUtilUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +615,7 @@
 				958367371D8F8E0D005E5E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

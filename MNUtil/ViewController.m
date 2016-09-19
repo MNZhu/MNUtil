@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "MNUtil.h"
+#import <CommonCrypto/CommonDigest.h>
 
 @interface ViewController ()
 
@@ -20,10 +22,30 @@
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    
+    
+//    
+//    
+//    NSString *s = [MNUtil getiphoneType];
+//    
+//    NSLog(@"%@--",[s md5Withstring:@"dsafafafasfa"]);
+//    return;
+//    
+//    [MNUtil GETwithUrl:@"http://paonan580.com/api/v1/dn-videos" Paras:@{
+//  @"access-token" : @"bFQ7niDGLsYCp-vPm6HAienWpPsxjrRI",
+//  @"page" : @"1",
+//  @"per-page" : @"20"
+//    } successBlock:^(NSURLSessionDataTask * _Nonnull task, id _Nullable ResponseData) {
+//        NSLog(@"%@",ResponseData);
+//    } FailBlock:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@",error);
+//    } Progress:^(NSProgress * _Nonnull downloadProgress) {
+//        NSLog(@"%f",downloadProgress.completedUnitCount/(CGFloat)downloadProgress.totalUnitCount);
+//    }];
 }
+
 
 
 @end
