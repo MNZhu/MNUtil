@@ -9,43 +9,57 @@
 #import "ViewController.h"
 #import "MNUtil.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <AFNetworking.h>
+#import "CircleProgressView.h"
+#import <Masonry.h>
+#import "XMGWaterflowLayout.h"
+#import <objc/runtime.h>
+
+
 
 @interface ViewController ()
 
+@property(nonatomic,weak)CircleProgressView* p;
+@property(nonatomic,strong)dispatch_source_t timer;
+
+@property(nonatomic,strong)UIView* tab;
+@property(nonatomic,strong)UIView* tt;
 @end
 
 @implementation ViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
+    
+
+    
+    
 }
 
+-(void)hide
+{
+    
+}
+
+-(void)test
+{
+    
+    
+}
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
+    NSDate *cc = [[NSDate alloc]init];
     
-//    
-//    
-//    NSString *s = [MNUtil getiphoneType];
-//    
-//    NSLog(@"%@--",[s md5Withstring:@"dsafafafasfa"]);
-//    return;
-//    
-//    [MNUtil GETwithUrl:@"http://paonan580.com/api/v1/dn-videos" Paras:@{
-//  @"access-token" : @"bFQ7niDGLsYCp-vPm6HAienWpPsxjrRI",
-//  @"page" : @"1",
-//  @"per-page" : @"20"
-//    } successBlock:^(NSURLSessionDataTask * _Nonnull task, id _Nullable ResponseData) {
-//        NSLog(@"%@",ResponseData);
-//    } FailBlock:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        NSLog(@"%@",error);
-//    } Progress:^(NSProgress * _Nonnull downloadProgress) {
-//        NSLog(@"%f",downloadProgress.completedUnitCount/(CGFloat)downloadProgress.totalUnitCount);
-//    }];
+    NSDateFormatter *f = [[NSDateFormatter alloc]init];
+    [f setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *d = [f stringFromDate:cc];
+    NSLog(@"%@",d);
 }
-
-
-
 @end

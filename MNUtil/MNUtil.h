@@ -15,7 +15,30 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
+#ifdef DEBUG
+
+#define MN_Log(...) NSLog(__VA_ARGS__)
+#else
+#define MN_Log(...)
+#endif
+
+
+#define MNCOLOR_s(r,g,b,a) [UIColor colorWithDisplayP3Red:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define MNCOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+
+@interface NSObject(MNObject)
+//-(BOOL)isnull;
+
+@property(nonatomic,assign,readonly)BOOL isNonull;
+@end
+
+
 @interface MNUtil : NSObject
+
+
+
 
 
 /**
@@ -118,7 +141,7 @@
  @param failblock   请求失败返回参数
  */
 
-+(void)GETwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock;
++(void)GETwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock;
 
 
 /**
@@ -129,7 +152,7 @@
  @param successblock 请求成功返回参数
  @param failblock   请求失败返回参数
  */
-+(void)POSTwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
++(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
 
 
 /**
@@ -142,7 +165,7 @@
  @param failblock     请求失败
  @param progressblock 下载进度
  */
-+(void)POSTwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para constructingBodyWithBlock:(void(^ _Nullable)(id<AFMultipartFormData>  _Nonnull formData))BodywithBlock successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
++(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para constructingBodyWithBlock:(void(^ _Nullable)(id<AFMultipartFormData>  _Nonnull formData))BodywithBlock successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
 
 
 /**
@@ -153,7 +176,7 @@
  @param successblock 完成回调
  @param failblock    失败回调
  */
-+(void)DELETEwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
++(void)DELETEwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
 
 
 /**
@@ -164,7 +187,7 @@
  @param successblock 完成回调
  @param failblock    失败回调
  */
-+(void)PUTwithUrl:(NSString * _Nonnull)url Paras:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
++(void)PUTwithUrl:(NSString * _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
 @end
 
 

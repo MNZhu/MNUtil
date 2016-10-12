@@ -28,7 +28,29 @@
 #import "MNUtil.h"
 
 
+
+@implementation NSObject(MNObject)
+
+/**
+ 判断object是否为空
+ @return 返回是-为空 否-不为空
+ */
+-(BOOL)isNonull
+{
+    if ([self isEqual:[NSNull null]]||(self == nil)||[self isEqual:NULL]) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+@end
+
+
 @implementation MNUtil
+
+
+
 
 
 /**
@@ -569,7 +591,7 @@
  @param successblock 请求成功返回参数
  @param failblock   请求失败返回参数
  */
-+(void)GETwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock
++(void)GETwithUrl:(NSString* _Nonnull)url Param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式
@@ -589,7 +611,7 @@
 }
 
 
-+(void)POSTwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock
++(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
 //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式
@@ -608,7 +630,7 @@
     }];
 }
 
-+(void)POSTwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para constructingBodyWithBlock:(void(^ _Nullable)(id<AFMultipartFormData>  _Nonnull formData))BodywithBlock successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock
++(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para constructingBodyWithBlock:(void(^ _Nullable)(id<AFMultipartFormData>  _Nonnull formData))BodywithBlock successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式
@@ -629,7 +651,7 @@
     
 }
 
-+(void)DELETEwithUrl:(NSString* _Nonnull)url Paras:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock
++(void)DELETEwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式
@@ -643,7 +665,7 @@
     }];
 }
 
-+(void)PUTwithUrl:(NSString * _Nonnull)url Paras:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock
++(void)PUTwithUrl:(NSString * _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式

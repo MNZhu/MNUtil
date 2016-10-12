@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6BDCE5A64F9078FA9AEAED58 /* libPods-MNUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */; };
+		95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95188D271D9280CC0065C1CC /* CircleProgressView.m */; };
+		95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */; };
 		958367071D8F8E0C005E5E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367061D8F8E0C005E5E9A /* main.m */; };
 		9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367091D8F8E0C005E5E9A /* AppDelegate.m */; };
 		9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583670C1D8F8E0C005E5E9A /* ViewController.m */; };
@@ -17,6 +19,10 @@
 		958367201D8F8E0C005E5E9A /* MNUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583671F1D8F8E0C005E5E9A /* MNUtilTests.m */; };
 		9583672B1D8F8E0C005E5E9A /* MNUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */; };
 		9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367391D8F8E37005E5E9A /* MNUtil.m */; };
+		958881081DACD175002F9318 /* NSObject+MN.m in Sources */ = {isa = PBXBuildFile; fileRef = 958881071DACD175002F9318 /* NSObject+MN.m */; };
+		95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1AC1D91117D00F06947 /* 透明图片.png */; };
+		95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BAD1B01D91139400F06947 /* NSArray+Log.m */; };
+		95BAD1B51D9116D500F06947 /* 222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1B41D9116D500F06947 /* 222.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,11 @@
 /* Begin PBXFileReference section */
 		137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.release.xcconfig"; sourceTree = "<group>"; };
 		8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNUtil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95188D251D9279F20065C1CC /* MNUtil.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNUtil.pch; sourceTree = "<group>"; };
+		95188D261D9280CC0065C1CC /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		95188D271D9280CC0065C1CC /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
+		95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWaterflowLayout.h; sourceTree = "<group>"; };
+		95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWaterflowLayout.m; sourceTree = "<group>"; };
 		958367021D8F8E0C005E5E9A /* MNUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958367061D8F8E0C005E5E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		958367081D8F8E0C005E5E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +68,13 @@
 		9583672C1D8F8E0D005E5E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958367381D8F8E37005E5E9A /* MNUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUtil.h; sourceTree = "<group>"; };
 		958367391D8F8E37005E5E9A /* MNUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNUtil.m; sourceTree = "<group>"; };
+		958881061DACD175002F9318 /* NSObject+MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MN.h"; sourceTree = "<group>"; };
+		958881071DACD175002F9318 /* NSObject+MN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MN.m"; sourceTree = "<group>"; };
+		958881091DACD190002F9318 /* NSObject_MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_MN.h; sourceTree = "<group>"; };
+		95BAD1AC1D91117D00F06947 /* 透明图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "透明图片.png"; sourceTree = "<group>"; };
+		95BAD1AF1D91139400F06947 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		95BAD1B01D91139400F06947 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		95BAD1B41D9116D500F06947 /* 222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 222.jpg; sourceTree = "<group>"; };
 		FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,8 +146,11 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
+				95BAD1AE1D91139400F06947 /* Log中文 */,
 				958367381D8F8E37005E5E9A /* MNUtil.h */,
 				958367391D8F8E37005E5E9A /* MNUtil.m */,
+				95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */,
+				95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */,
 				958367081D8F8E0C005E5E9A /* AppDelegate.h */,
 				958367091D8F8E0C005E5E9A /* AppDelegate.m */,
 				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
@@ -139,6 +160,12 @@
 				958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */,
 				958367161D8F8E0C005E5E9A /* Info.plist */,
 				958367051D8F8E0C005E5E9A /* Supporting Files */,
+				95188D251D9279F20065C1CC /* MNUtil.pch */,
+				95188D261D9280CC0065C1CC /* CircleProgressView.h */,
+				95188D271D9280CC0065C1CC /* CircleProgressView.m */,
+				958881061DACD175002F9318 /* NSObject+MN.h */,
+				958881071DACD175002F9318 /* NSObject+MN.m */,
+				958881091DACD190002F9318 /* NSObject_MN.h */,
 			);
 			path = MNUtil;
 			sourceTree = "<group>";
@@ -146,6 +173,8 @@
 		958367051D8F8E0C005E5E9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				95BAD1B41D9116D500F06947 /* 222.jpg */,
+				95BAD1AC1D91117D00F06947 /* 透明图片.png */,
 				958367061D8F8E0C005E5E9A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -167,6 +196,15 @@
 				9583672C1D8F8E0D005E5E9A /* Info.plist */,
 			);
 			path = MNUtilUITests;
+			sourceTree = "<group>";
+		};
+		95BAD1AE1D91139400F06947 /* Log中文 */ = {
+			isa = PBXGroup;
+			children = (
+				95BAD1AF1D91139400F06947 /* NSArray+Log.h */,
+				95BAD1B01D91139400F06947 /* NSArray+Log.m */,
+			);
+			path = "Log中文";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */,
+				95BAD1B51D9116D500F06947 /* 222.jpg in Resources */,
+				95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */,
 				958367121D8F8E0C005E5E9A /* Assets.xcassets in Resources */,
 				958367101D8F8E0C005E5E9A /* Main.storyboard in Resources */,
 			);
@@ -356,10 +396,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */,
 				9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */,
 				9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */,
 				958367071D8F8E0C005E5E9A /* main.m in Sources */,
 				9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */,
+				95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */,
+				958881081DACD175002F9318 /* NSObject+MN.m in Sources */,
+				95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +476,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -444,6 +489,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -454,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -479,6 +525,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -489,13 +536,14 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -508,6 +556,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5WPH96WKVE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
@@ -521,6 +571,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5WPH96WKVE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
