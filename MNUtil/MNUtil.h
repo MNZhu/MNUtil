@@ -23,11 +23,15 @@
 #endif
 
 
-#define MNCOLOR_s(r,g,b,a) [UIColor colorWithDisplayP3Red:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define MNCOLOR_P3(r,g,b,a) [UIColor colorWithDisplayP3Red:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define MNCOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 
+
+/**
+ 判断对象是否为空
+ */
 @interface NSObject(MNObject)
 //-(BOOL)isnull;
 
@@ -35,6 +39,15 @@
 @end
 
 
+@interface UIImage (MNImage)
++( instancetype _Nonnull)imageWithColor_mn:( UIColor * _Nullable)color;
+
+@end
+
+
+/**
+ MN工具
+ */
 @interface MNUtil : NSObject
 
 

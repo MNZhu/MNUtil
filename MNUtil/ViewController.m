@@ -14,8 +14,8 @@
 #import <Masonry.h>
 #import "XMGWaterflowLayout.h"
 #import <objc/runtime.h>
-
-
+#import "test1ViewController.h"
+#import "CollectBtn.h"
 
 @interface ViewController ()
 
@@ -35,10 +35,6 @@
     
     
     
-    
-
-    
-    
 }
 
 -(void)hide
@@ -54,12 +50,5 @@
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
-    NSDate *cc = [[NSDate alloc]init];
-    
-    NSDateFormatter *f = [[NSDateFormatter alloc]init];
-    [f setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *d = [f stringFromDate:cc];
-    NSLog(@"%@",d);
 }
 @end

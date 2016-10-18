@@ -591,7 +591,11 @@
  @param successblock 请求成功返回参数
  @param failblock   请求失败返回参数
  */
-+(void)GETwithUrl:(NSString* _Nonnull)url Param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock
+
+
+
+
++(void)GETwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.requestSerializer = [AFHTTPRequestSerializer serializer]; // 上传普通格式
@@ -854,6 +858,7 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 
 @end
 
+
 @implementation UIButton (Text)
 -(NSString*_Nullable)text
 {
@@ -872,3 +877,31 @@ void addRoundRectToPath(CGContextRef context, CGRect rect, float ovalWidth,
 
 
 @end
+
+
+
+@implementation UIImage(MNImage)
+
+
+/**
+ 生成一个纯色图片
+ */
++(instancetype)imageWithColor_mn:(UIColor *)color
+{
+    
+    if (!color) {
+        color = [UIColor clearColor];
+    }
+    
+    CGRect rect=CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *theImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return theImage;
+}
+
+@end
+

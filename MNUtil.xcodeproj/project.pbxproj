@@ -20,6 +20,11 @@
 		9583672B1D8F8E0C005E5E9A /* MNUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */; };
 		9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367391D8F8E37005E5E9A /* MNUtil.m */; };
 		958881081DACD175002F9318 /* NSObject+MN.m in Sources */ = {isa = PBXBuildFile; fileRef = 958881071DACD175002F9318 /* NSObject+MN.m */; };
+		95BA042C1DB5EFF7009FC4B7 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */; };
+		95BA042D1DB5EFF7009FC4B7 /* test1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */; };
+		95BA04301DB5F54C009FC4B7 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA042F1DB5F54C009FC4B7 /* test.m */; };
+		95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */; };
+		95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */; };
 		95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1AC1D91117D00F06947 /* 透明图片.png */; };
 		95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BAD1B01D91139400F06947 /* NSArray+Log.m */; };
 		95BAD1B51D9116D500F06947 /* 222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1B41D9116D500F06947 /* 222.jpg */; };
@@ -71,6 +76,14 @@
 		958881061DACD175002F9318 /* NSObject+MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MN.h"; sourceTree = "<group>"; };
 		958881071DACD175002F9318 /* NSObject+MN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MN.m"; sourceTree = "<group>"; };
 		958881091DACD190002F9318 /* NSObject_MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_MN.h; sourceTree = "<group>"; };
+		95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test1ViewController.h; sourceTree = "<group>"; };
+		95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test1ViewController.m; sourceTree = "<group>"; };
+		95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test1ViewController.xib; sourceTree = "<group>"; };
+		95BA042E1DB5F54C009FC4B7 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		95BA042F1DB5F54C009FC4B7 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectBtn.xib; sourceTree = "<group>"; };
+		95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectBtn.h; sourceTree = "<group>"; };
+		95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectBtn.m; sourceTree = "<group>"; };
 		95BAD1AC1D91117D00F06947 /* 透明图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "透明图片.png"; sourceTree = "<group>"; };
 		95BAD1AF1D91139400F06947 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		95BAD1B01D91139400F06947 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -166,6 +179,14 @@
 				958881061DACD175002F9318 /* NSObject+MN.h */,
 				958881071DACD175002F9318 /* NSObject+MN.m */,
 				958881091DACD190002F9318 /* NSObject_MN.h */,
+				95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */,
+				95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */,
+				95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */,
+				95BA042E1DB5F54C009FC4B7 /* test.h */,
+				95BA042F1DB5F54C009FC4B7 /* test.m */,
+				95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */,
+				95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */,
+				95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */,
 			);
 			path = MNUtil;
 			sourceTree = "<group>";
@@ -319,7 +340,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BA042D1DB5EFF7009FC4B7 /* test1ViewController.xib in Resources */,
 				958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */,
+				95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */,
 				95BAD1B51D9116D500F06947 /* 222.jpg in Resources */,
 				95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */,
 				958367121D8F8E0C005E5E9A /* Assets.xcassets in Resources */,
@@ -397,11 +420,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */,
+				95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */,
 				9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */,
 				9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */,
 				958367071D8F8E0C005E5E9A /* main.m in Sources */,
 				9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */,
+				95BA04301DB5F54C009FC4B7 /* test.m in Sources */,
 				95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */,
+				95BA042C1DB5EFF7009FC4B7 /* test1ViewController.m in Sources */,
 				958881081DACD175002F9318 /* NSObject+MN.m in Sources */,
 				95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */,
 			);
