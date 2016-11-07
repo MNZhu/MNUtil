@@ -159,11 +159,8 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
-				95BAD1AE1D91139400F06947 /* Log中文 */,
-				958367381D8F8E37005E5E9A /* MNUtil.h */,
-				958367391D8F8E37005E5E9A /* MNUtil.m */,
-				95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */,
-				95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */,
+				9584DE481DC32DE000818347 /* 第三方库 */,
+				9584DE471DC32DD500818347 /* 工具类 */,
 				958367081D8F8E0C005E5E9A /* AppDelegate.h */,
 				958367091D8F8E0C005E5E9A /* AppDelegate.m */,
 				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
@@ -217,6 +214,25 @@
 				9583672C1D8F8E0D005E5E9A /* Info.plist */,
 			);
 			path = MNUtilUITests;
+			sourceTree = "<group>";
+		};
+		9584DE471DC32DD500818347 /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				958367381D8F8E37005E5E9A /* MNUtil.h */,
+				958367391D8F8E37005E5E9A /* MNUtil.m */,
+			);
+			name = "工具类";
+			sourceTree = "<group>";
+		};
+		9584DE481DC32DE000818347 /* 第三方库 */ = {
+			isa = PBXGroup;
+			children = (
+				95BAD1AE1D91139400F06947 /* Log中文 */,
+				95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */,
+				95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */,
+			);
+			name = "第三方库";
 			sourceTree = "<group>";
 		};
 		95BAD1AE1D91139400F06947 /* Log中文 */ = {
@@ -585,6 +601,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +617,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
 				PRODUCT_NAME = "$(TARGET_NAME)";

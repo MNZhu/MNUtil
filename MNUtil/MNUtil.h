@@ -52,6 +52,10 @@
 
 
 
+/**
+ 十进制转十六进制
+ */
+- (NSString* _Nullable )ToHex:(uint16_t)tmpid;
 
 
 /**
