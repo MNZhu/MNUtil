@@ -23,11 +23,6 @@ typedef void (^bloc)();
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-
-    test *t = [[test alloc]init];
-    t.frame = CGRectMake(10, 30, 100, 100);
-    [self.view addSubview:t];
     
     
 

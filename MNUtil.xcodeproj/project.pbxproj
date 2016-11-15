@@ -10,10 +10,13 @@
 		6BDCE5A64F9078FA9AEAED58 /* libPods-MNUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */; };
 		95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95188D271D9280CC0065C1CC /* CircleProgressView.m */; };
 		95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */; };
+		954D9D1B1DD2CE0700DB4447 /* MNNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */; };
+		954D9D1E1DD2CE8100DB4447 /* LCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D1D1DD2CE8100DB4447 /* LCNavigationController.m */; };
+		954D9D221DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D211DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		954D9D251DD3073500DB4447 /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D241DD3073500DB4447 /* test2ViewController.m */; };
 		958367071D8F8E0C005E5E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367061D8F8E0C005E5E9A /* main.m */; };
 		9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367091D8F8E0C005E5E9A /* AppDelegate.m */; };
 		9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583670C1D8F8E0C005E5E9A /* ViewController.m */; };
-		958367101D8F8E0C005E5E9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9583670E1D8F8E0C005E5E9A /* Main.storyboard */; };
 		958367121D8F8E0C005E5E9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 958367111D8F8E0C005E5E9A /* Assets.xcassets */; };
 		958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */; };
 		958367201D8F8E0C005E5E9A /* MNUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583671F1D8F8E0C005E5E9A /* MNUtilTests.m */; };
@@ -25,9 +28,8 @@
 		95BA04301DB5F54C009FC4B7 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA042F1DB5F54C009FC4B7 /* test.m */; };
 		95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */; };
 		95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */; };
-		95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1AC1D91117D00F06947 /* 透明图片.png */; };
 		95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BAD1B01D91139400F06947 /* NSArray+Log.m */; };
-		95BAD1B51D9116D500F06947 /* 222.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 95BAD1B41D9116D500F06947 /* 222.jpg */; };
+		95E284A71DD5AEF000D8EA26 /* HomePresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,17 +53,24 @@
 		137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.release.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.release.xcconfig"; sourceTree = "<group>"; };
 		8D4AD68524B74F70E9B87A82 /* libPods-MNUtil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MNUtil.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95188D251D9279F20065C1CC /* MNUtil.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNUtil.pch; sourceTree = "<group>"; };
-		95188D261D9280CC0065C1CC /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
-		95188D271D9280CC0065C1CC /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
-		95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWaterflowLayout.h; sourceTree = "<group>"; };
-		95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWaterflowLayout.m; sourceTree = "<group>"; };
+		95188D261D9280CC0065C1CC /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CircleProgressView.h; path = ../CircleProgressView.h; sourceTree = "<group>"; };
+		95188D271D9280CC0065C1CC /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CircleProgressView.m; path = ../CircleProgressView.m; sourceTree = "<group>"; };
+		95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMGWaterflowLayout.h; path = ../XMGWaterflowLayout.h; sourceTree = "<group>"; };
+		95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMGWaterflowLayout.m; path = ../XMGWaterflowLayout.m; sourceTree = "<group>"; };
+		954D9D191DD2CE0700DB4447 /* MNNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNNavigationViewController.h; path = ../MNNavigationViewController.h; sourceTree = "<group>"; };
+		954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNNavigationViewController.m; path = ../MNNavigationViewController.m; sourceTree = "<group>"; };
+		954D9D1C1DD2CE8100DB4447 /* LCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LCNavigationController.h; path = ../LCNavigationController.h; sourceTree = "<group>"; };
+		954D9D1D1DD2CE8100DB4447 /* LCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCNavigationController.m; path = ../LCNavigationController.m; sourceTree = "<group>"; };
+		954D9D201DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		954D9D211DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		954D9D231DD3073500DB4447 /* test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test2ViewController.h; path = ../test2ViewController.h; sourceTree = "<group>"; };
+		954D9D241DD3073500DB4447 /* test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test2ViewController.m; path = ../test2ViewController.m; sourceTree = "<group>"; };
 		958367021D8F8E0C005E5E9A /* MNUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958367061D8F8E0C005E5E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		958367081D8F8E0C005E5E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		958367091D8F8E0C005E5E9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9583670B1D8F8E0C005E5E9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9583670C1D8F8E0C005E5E9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9583670F1D8F8E0C005E5E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		958367081D8F8E0C005E5E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		958367091D8F8E0C005E5E9A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		9583670B1D8F8E0C005E5E9A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		9583670C1D8F8E0C005E5E9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		958367111D8F8E0C005E5E9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		958367141D8F8E0C005E5E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958367161D8F8E0C005E5E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,23 +80,23 @@
 		958367261D8F8E0C005E5E9A /* MNUtilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MNUtilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNUtilUITests.m; sourceTree = "<group>"; };
 		9583672C1D8F8E0D005E5E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		958367381D8F8E37005E5E9A /* MNUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNUtil.h; sourceTree = "<group>"; };
-		958367391D8F8E37005E5E9A /* MNUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNUtil.m; sourceTree = "<group>"; };
-		958881061DACD175002F9318 /* NSObject+MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MN.h"; sourceTree = "<group>"; };
-		958881071DACD175002F9318 /* NSObject+MN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MN.m"; sourceTree = "<group>"; };
-		958881091DACD190002F9318 /* NSObject_MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_MN.h; sourceTree = "<group>"; };
-		95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test1ViewController.h; sourceTree = "<group>"; };
-		95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test1ViewController.m; sourceTree = "<group>"; };
-		95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = test1ViewController.xib; sourceTree = "<group>"; };
-		95BA042E1DB5F54C009FC4B7 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		95BA042F1DB5F54C009FC4B7 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
-		95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectBtn.xib; sourceTree = "<group>"; };
-		95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectBtn.h; sourceTree = "<group>"; };
-		95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectBtn.m; sourceTree = "<group>"; };
-		95BAD1AC1D91117D00F06947 /* 透明图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "透明图片.png"; sourceTree = "<group>"; };
+		958367381D8F8E37005E5E9A /* MNUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MNUtil.h; path = ../MNUtil.h; sourceTree = "<group>"; };
+		958367391D8F8E37005E5E9A /* MNUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MNUtil.m; path = ../MNUtil.m; sourceTree = "<group>"; };
+		958881061DACD175002F9318 /* NSObject+MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+MN.h"; path = "../NSObject+MN.h"; sourceTree = "<group>"; };
+		958881071DACD175002F9318 /* NSObject+MN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MN.m"; path = "../NSObject+MN.m"; sourceTree = "<group>"; };
+		958881091DACD190002F9318 /* NSObject_MN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSObject_MN.h; path = ../NSObject_MN.h; sourceTree = "<group>"; };
+		95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test1ViewController.h; path = ../test1ViewController.h; sourceTree = "<group>"; };
+		95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test1ViewController.m; path = ../test1ViewController.m; sourceTree = "<group>"; };
+		95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = test1ViewController.xib; path = ../test1ViewController.xib; sourceTree = "<group>"; };
+		95BA042E1DB5F54C009FC4B7 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test.h; path = ../test.h; sourceTree = "<group>"; };
+		95BA042F1DB5F54C009FC4B7 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test.m; path = ../test.m; sourceTree = "<group>"; };
+		95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectBtn.xib; path = ../CollectBtn.xib; sourceTree = "<group>"; };
+		95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectBtn.h; path = ../CollectBtn.h; sourceTree = "<group>"; };
+		95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectBtn.m; path = ../CollectBtn.m; sourceTree = "<group>"; };
 		95BAD1AF1D91139400F06947 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		95BAD1B01D91139400F06947 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
-		95BAD1B41D9116D500F06947 /* 222.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 222.jpg; sourceTree = "<group>"; };
+		95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePresentationController.h; path = ../HomePresentationController.h; sourceTree = "<group>"; };
+		95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePresentationController.m; path = ../HomePresentationController.m; sourceTree = "<group>"; };
 		FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +143,84 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		954D9D1F1DD2FC9700DB4447 /* FDFullscreenPopGesture1 */ = {
+			isa = PBXGroup;
+			children = (
+				954D9D201DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.h */,
+				954D9D211DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			name = FDFullscreenPopGesture1;
+			path = ../FDFullscreenPopGesture1;
+			sourceTree = "<group>";
+		};
+		954E859E1DDAAE9800BB575E /* 第三方库 */ = {
+			isa = PBXGroup;
+			children = (
+				954D9D1F1DD2FC9700DB4447 /* FDFullscreenPopGesture1 */,
+				95BAD1AE1D91139400F06947 /* Log中文 */,
+				95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */,
+				95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */,
+			);
+			path = "第三方库";
+			sourceTree = "<group>";
+		};
+		954E859F1DDAAE9800BB575E /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				954D9D1C1DD2CE8100DB4447 /* LCNavigationController.h */,
+				954D9D1D1DD2CE8100DB4447 /* LCNavigationController.m */,
+				958367381D8F8E37005E5E9A /* MNUtil.h */,
+				958367391D8F8E37005E5E9A /* MNUtil.m */,
+			);
+			path = "工具类";
+			sourceTree = "<group>";
+		};
+		954E85A01DDAAE9800BB575E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				958367081D8F8E0C005E5E9A /* AppDelegate.h */,
+				958367091D8F8E0C005E5E9A /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		954E85A11DDAAEE600BB575E /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				954E85A21DDAAF1600BB575E /* View */,
+				958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */,
+				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
+				9583670C1D8F8E0C005E5E9A /* ViewController.m */,
+				95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */,
+				95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */,
+				954D9D231DD3073500DB4447 /* test2ViewController.h */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		954E85A21DDAAF1600BB575E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				954D9D241DD3073500DB4447 /* test2ViewController.m */,
+				95188D261D9280CC0065C1CC /* CircleProgressView.h */,
+				95188D271D9280CC0065C1CC /* CircleProgressView.m */,
+				958881061DACD175002F9318 /* NSObject+MN.h */,
+				958881071DACD175002F9318 /* NSObject+MN.m */,
+				958881091DACD190002F9318 /* NSObject_MN.h */,
+				95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */,
+				95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */,
+				95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */,
+				95BA042E1DB5F54C009FC4B7 /* test.h */,
+				95BA042F1DB5F54C009FC4B7 /* test.m */,
+				95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */,
+				95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */,
+				95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */,
+				954D9D191DD2CE0700DB4447 /* MNNavigationViewController.h */,
+				954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		958366F91D8F8E0C005E5E9A = {
 			isa = PBXGroup;
 			children = (
@@ -159,31 +246,12 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
-				9584DE481DC32DE000818347 /* 第三方库 */,
-				9584DE471DC32DD500818347 /* 工具类 */,
-				958367081D8F8E0C005E5E9A /* AppDelegate.h */,
-				958367091D8F8E0C005E5E9A /* AppDelegate.m */,
-				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
-				9583670C1D8F8E0C005E5E9A /* ViewController.m */,
-				9583670E1D8F8E0C005E5E9A /* Main.storyboard */,
+				954E859E1DDAAE9800BB575E /* 第三方库 */,
+				954E859F1DDAAE9800BB575E /* 工具类 */,
+				954E85A01DDAAE9800BB575E /* Other */,
+				954E85A11DDAAEE600BB575E /* Test */,
 				958367111D8F8E0C005E5E9A /* Assets.xcassets */,
-				958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */,
-				958367161D8F8E0C005E5E9A /* Info.plist */,
 				958367051D8F8E0C005E5E9A /* Supporting Files */,
-				95188D251D9279F20065C1CC /* MNUtil.pch */,
-				95188D261D9280CC0065C1CC /* CircleProgressView.h */,
-				95188D271D9280CC0065C1CC /* CircleProgressView.m */,
-				958881061DACD175002F9318 /* NSObject+MN.h */,
-				958881071DACD175002F9318 /* NSObject+MN.m */,
-				958881091DACD190002F9318 /* NSObject_MN.h */,
-				95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */,
-				95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */,
-				95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */,
-				95BA042E1DB5F54C009FC4B7 /* test.h */,
-				95BA042F1DB5F54C009FC4B7 /* test.m */,
-				95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */,
-				95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */,
-				95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */,
 			);
 			path = MNUtil;
 			sourceTree = "<group>";
@@ -191,9 +259,9 @@
 		958367051D8F8E0C005E5E9A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				95BAD1B41D9116D500F06947 /* 222.jpg */,
-				95BAD1AC1D91117D00F06947 /* 透明图片.png */,
+				958367161D8F8E0C005E5E9A /* Info.plist */,
 				958367061D8F8E0C005E5E9A /* main.m */,
+				95188D251D9279F20065C1CC /* MNUtil.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -216,32 +284,14 @@
 			path = MNUtilUITests;
 			sourceTree = "<group>";
 		};
-		9584DE471DC32DD500818347 /* 工具类 */ = {
-			isa = PBXGroup;
-			children = (
-				958367381D8F8E37005E5E9A /* MNUtil.h */,
-				958367391D8F8E37005E5E9A /* MNUtil.m */,
-			);
-			name = "工具类";
-			sourceTree = "<group>";
-		};
-		9584DE481DC32DE000818347 /* 第三方库 */ = {
-			isa = PBXGroup;
-			children = (
-				95BAD1AE1D91139400F06947 /* Log中文 */,
-				95188D291D9292E10065C1CC /* XMGWaterflowLayout.h */,
-				95188D2A1D9292E10065C1CC /* XMGWaterflowLayout.m */,
-			);
-			name = "第三方库";
-			sourceTree = "<group>";
-		};
 		95BAD1AE1D91139400F06947 /* Log中文 */ = {
 			isa = PBXGroup;
 			children = (
 				95BAD1AF1D91139400F06947 /* NSArray+Log.h */,
 				95BAD1B01D91139400F06947 /* NSArray+Log.m */,
 			);
-			path = "Log中文";
+			name = "Log中文";
+			path = "../Log中文";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +364,7 @@
 				TargetAttributes = {
 					958367011D8F8E0C005E5E9A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5WPH96WKVE;
+						DevelopmentTeam = AP5VCSMC5A;
 						ProvisioningStyle = Automatic;
 					};
 					9583671A1D8F8E0C005E5E9A = {
@@ -359,10 +409,7 @@
 				95BA042D1DB5EFF7009FC4B7 /* test1ViewController.xib in Resources */,
 				958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */,
 				95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */,
-				95BAD1B51D9116D500F06947 /* 222.jpg in Resources */,
-				95BAD1AD1D91117D00F06947 /* 透明图片.png in Resources */,
 				958367121D8F8E0C005E5E9A /* Assets.xcassets in Resources */,
-				958367101D8F8E0C005E5E9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		98E6D429423151F38A1AB28D /* [CP] Copy Pods Resources */ = {
@@ -437,15 +484,20 @@
 			files = (
 				95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */,
 				95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */,
+				954D9D251DD3073500DB4447 /* test2ViewController.m in Sources */,
 				9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */,
+				95E284A71DD5AEF000D8EA26 /* HomePresentationController.m in Sources */,
 				9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */,
 				958367071D8F8E0C005E5E9A /* main.m in Sources */,
+				954D9D1B1DD2CE0700DB4447 /* MNNavigationViewController.m in Sources */,
 				9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */,
 				95BA04301DB5F54C009FC4B7 /* test.m in Sources */,
 				95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */,
 				95BA042C1DB5EFF7009FC4B7 /* test1ViewController.m in Sources */,
 				958881081DACD175002F9318 /* NSObject+MN.m in Sources */,
 				95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */,
+				954D9D221DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				954D9D1E1DD2CE8100DB4447 /* LCNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,20 +533,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9583670E1D8F8E0C005E5E9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9583670F1D8F8E0C005E5E9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				958367141D8F8E0C005E5E9A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -597,13 +642,13 @@
 			baseConfigurationReference = FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5WPH96WKVE;
+				DEVELOPMENT_TEAM = AP5VCSMC5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
+				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -613,13 +658,13 @@
 			baseConfigurationReference = 137BB5775311BE927CDD9F75 /* Pods-MNUtil.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5WPH96WKVE;
+				DEVELOPMENT_TEAM = AP5VCSMC5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/MNUtil.pch";
 				INFOPLIST_FILE = MNUtil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
+				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
