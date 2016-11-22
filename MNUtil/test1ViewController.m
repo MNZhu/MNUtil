@@ -8,7 +8,7 @@
 
 #import "test1ViewController.h"
 #import "MNUtil.h"
-#import "test.h"
+
 
 typedef void (^bloc)();
 
@@ -30,6 +30,7 @@ typedef void (^bloc)();
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
     
     

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 #import <sys/utsname.h>
 //#import <MJExtension.h>
 #import <CommonCrypto/CommonDigest.h>

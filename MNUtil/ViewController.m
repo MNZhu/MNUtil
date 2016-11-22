@@ -17,8 +17,12 @@
 #import "test1ViewController.h"
 #import "CollectBtn.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "test2ViewController.h"
+
 #import "HomePresentationController.h"
+#import "PopAnimation.h"
+#import "na1ViewController.h"
+#import "na2ViewController.h"
+#import "MNNavigationViewController.h"
 
 @interface ViewController ()<UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning>
 
@@ -27,15 +31,32 @@
 
 @property(nonatomic,strong)UIView* tab;
 @property(nonatomic,strong)UIView* tt;
+
+@property(nonatomic,strong) PopAnimation* presentVc;
+
+
 @end
 
 @implementation ViewController
 
-
+-(PopAnimation *)presentVc
+{
+    if (!_presentVc) {
+        _presentVc = [[PopAnimation alloc]init];
+    }
+    return _presentVc;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake(20, 30, 60, 60);
+    [btn setBackgroundColor:[UIColor greenColor]];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
+    
     
 }
 
@@ -46,77 +67,40 @@
 
 -(void)test
 {
-    
+//    UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:[[na1ViewController alloc]init]];
+    MNNavigationViewController *na = [[MNNavigationViewController alloc]initWithRootViewController:[[na1ViewController alloc]init]];
+    [self presentViewController:na animated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     
+    
+    //弹出视频-自定义动画
     test1ViewController *vc = [[test1ViewController alloc]init];
     vc.view.backgroundColor = [UIColor orangeColor];
     
     vc.modalPresentationStyle = UIModalPresentationCustom;
-    vc.transitioningDelegate = self;
-    
-    
-    
-    
+    vc.transitioningDelegate = (id)self.presentVc;
     [self presentViewController:vc animated:YES completion:nil];
 
 }
 
--(UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
-{
-    HomePresentationController *presentVc = [[HomePresentationController alloc]initWithPresentedViewController:presented presentingViewController:presenting];
-    
-    
-    return presentVc;
-}
 
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
-    return self;
-}
 
 
--(id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
-    return self;
-}
 
--(NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
-{
-    return 1;
-}
 
--(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
-{
-    
-    BOOL a = transitionContext.isInteractive;
-    MN_Log(@"%d",a);
-    UIViewController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    
-    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    toView.transform = CGAffineTransformMakeScale(0.0, 0.0);
-    [transitionContext.containerView addSubview:toView];
-    
-    toView.layer.anchorPoint = CGPointMake(1, 0);
-    
-    [UIView animateWithDuration:0.3 animations:^{
-        toView.transform = CGAffineTransformIdentity;
-        
-    } completion:^(BOOL finished) {
-        [transitionContext completeTransition:YES];
-        
-    }];
-    
-    MN_Log(@"%@",toVc);
-    MN_Log(@"%@",fromVc);
-    
-    
-}
+
+
+
+
+
+
+
+
+
 
 
 @end

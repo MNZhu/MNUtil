@@ -13,7 +13,6 @@
 		954D9D1B1DD2CE0700DB4447 /* MNNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */; };
 		954D9D1E1DD2CE8100DB4447 /* LCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D1D1DD2CE8100DB4447 /* LCNavigationController.m */; };
 		954D9D221DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D211DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		954D9D251DD3073500DB4447 /* test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 954D9D241DD3073500DB4447 /* test2ViewController.m */; };
 		958367071D8F8E0C005E5E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367061D8F8E0C005E5E9A /* main.m */; };
 		9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958367091D8F8E0C005E5E9A /* AppDelegate.m */; };
 		9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583670C1D8F8E0C005E5E9A /* ViewController.m */; };
@@ -25,10 +24,17 @@
 		958881081DACD175002F9318 /* NSObject+MN.m in Sources */ = {isa = PBXBuildFile; fileRef = 958881071DACD175002F9318 /* NSObject+MN.m */; };
 		95BA042C1DB5EFF7009FC4B7 /* test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */; };
 		95BA042D1DB5EFF7009FC4B7 /* test1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */; };
-		95BA04301DB5F54C009FC4B7 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA042F1DB5F54C009FC4B7 /* test.m */; };
 		95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */; };
 		95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */; };
 		95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 95BAD1B01D91139400F06947 /* NSArray+Log.m */; };
+		95E14D411DDD4D1E009D4B9F /* PopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E14D401DDD4D1E009D4B9F /* PopAnimation.m */; };
+		95E14D471DDD5456009D4B9F /* QRcodeScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E14D451DDD5456009D4B9F /* QRcodeScanViewController.m */; };
+		95E14D481DDD5456009D4B9F /* QRcodeScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E14D461DDD5456009D4B9F /* QRcodeScanViewController.xib */; };
+		95E14D4C1DDD7A09009D4B9F /* na1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E14D4A1DDD7A09009D4B9F /* na1ViewController.m */; };
+		95E14D4D1DDD7A09009D4B9F /* na1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E14D4B1DDD7A09009D4B9F /* na1ViewController.xib */; };
+		95E14D511DDD7A20009D4B9F /* na2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E14D4F1DDD7A20009D4B9F /* na2ViewController.m */; };
+		95E14D521DDD7A20009D4B9F /* na2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E14D501DDD7A20009D4B9F /* na2ViewController.xib */; };
+		95E14D551DDD9FAE009D4B9F /* MNNaviAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E14D541DDD9FAE009D4B9F /* MNNaviAnimation.m */; };
 		95E284A71DD5AEF000D8EA26 /* HomePresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +69,6 @@
 		954D9D1D1DD2CE8100DB4447 /* LCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LCNavigationController.m; path = ../LCNavigationController.m; sourceTree = "<group>"; };
 		954D9D201DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		954D9D211DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		954D9D231DD3073500DB4447 /* test2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test2ViewController.h; path = ../test2ViewController.h; sourceTree = "<group>"; };
-		954D9D241DD3073500DB4447 /* test2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test2ViewController.m; path = ../test2ViewController.m; sourceTree = "<group>"; };
 		958367021D8F8E0C005E5E9A /* MNUtil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNUtil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958367061D8F8E0C005E5E9A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		958367081D8F8E0C005E5E9A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -88,15 +92,26 @@
 		95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test1ViewController.h; path = ../test1ViewController.h; sourceTree = "<group>"; };
 		95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test1ViewController.m; path = ../test1ViewController.m; sourceTree = "<group>"; };
 		95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = test1ViewController.xib; path = ../test1ViewController.xib; sourceTree = "<group>"; };
-		95BA042E1DB5F54C009FC4B7 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = test.h; path = ../test.h; sourceTree = "<group>"; };
-		95BA042F1DB5F54C009FC4B7 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = test.m; path = ../test.m; sourceTree = "<group>"; };
 		95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectBtn.xib; path = ../CollectBtn.xib; sourceTree = "<group>"; };
 		95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectBtn.h; path = ../CollectBtn.h; sourceTree = "<group>"; };
 		95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectBtn.m; path = ../CollectBtn.m; sourceTree = "<group>"; };
 		95BAD1AF1D91139400F06947 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		95BAD1B01D91139400F06947 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
-		95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePresentationController.h; path = ../HomePresentationController.h; sourceTree = "<group>"; };
-		95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePresentationController.m; path = ../HomePresentationController.m; sourceTree = "<group>"; };
+		95E14D3F1DDD4D1E009D4B9F /* PopAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimation.h; sourceTree = "<group>"; };
+		95E14D401DDD4D1E009D4B9F /* PopAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimation.m; sourceTree = "<group>"; };
+		95E14D441DDD5456009D4B9F /* QRcodeScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRcodeScanViewController.h; sourceTree = "<group>"; };
+		95E14D451DDD5456009D4B9F /* QRcodeScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRcodeScanViewController.m; sourceTree = "<group>"; };
+		95E14D461DDD5456009D4B9F /* QRcodeScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRcodeScanViewController.xib; sourceTree = "<group>"; };
+		95E14D491DDD7A09009D4B9F /* na1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = na1ViewController.h; sourceTree = "<group>"; };
+		95E14D4A1DDD7A09009D4B9F /* na1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = na1ViewController.m; sourceTree = "<group>"; };
+		95E14D4B1DDD7A09009D4B9F /* na1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = na1ViewController.xib; sourceTree = "<group>"; };
+		95E14D4E1DDD7A20009D4B9F /* na2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = na2ViewController.h; sourceTree = "<group>"; };
+		95E14D4F1DDD7A20009D4B9F /* na2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = na2ViewController.m; sourceTree = "<group>"; };
+		95E14D501DDD7A20009D4B9F /* na2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = na2ViewController.xib; sourceTree = "<group>"; };
+		95E14D531DDD9FAE009D4B9F /* MNNaviAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNNaviAnimation.h; sourceTree = "<group>"; };
+		95E14D541DDD9FAE009D4B9F /* MNNaviAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNNaviAnimation.m; sourceTree = "<group>"; };
+		95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomePresentationController.h; path = ../../HomePresentationController.h; sourceTree = "<group>"; };
+		95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomePresentationController.m; path = ../../HomePresentationController.m; sourceTree = "<group>"; };
 		FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,13 +202,21 @@
 		954E85A11DDAAEE600BB575E /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				95E14D491DDD7A09009D4B9F /* na1ViewController.h */,
+				95E14D4A1DDD7A09009D4B9F /* na1ViewController.m */,
+				95E14D4B1DDD7A09009D4B9F /* na1ViewController.xib */,
+				95E14D4E1DDD7A20009D4B9F /* na2ViewController.h */,
+				95E14D4F1DDD7A20009D4B9F /* na2ViewController.m */,
+				95E14D501DDD7A20009D4B9F /* na2ViewController.xib */,
+				954D9D191DD2CE0700DB4447 /* MNNavigationViewController.h */,
+				954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */,
+				95E14D531DDD9FAE009D4B9F /* MNNaviAnimation.h */,
+				95E14D541DDD9FAE009D4B9F /* MNNaviAnimation.m */,
+				95E14D3B1DDD4BB9009D4B9F /* 封装view */,
 				954E85A21DDAAF1600BB575E /* View */,
-				958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */,
 				9583670B1D8F8E0C005E5E9A /* ViewController.h */,
 				9583670C1D8F8E0C005E5E9A /* ViewController.m */,
-				95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */,
-				95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */,
-				954D9D231DD3073500DB4447 /* test2ViewController.h */,
+				958367131D8F8E0C005E5E9A /* LaunchScreen.storyboard */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -201,7 +224,6 @@
 		954E85A21DDAAF1600BB575E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				954D9D241DD3073500DB4447 /* test2ViewController.m */,
 				95188D261D9280CC0065C1CC /* CircleProgressView.h */,
 				95188D271D9280CC0065C1CC /* CircleProgressView.m */,
 				958881061DACD175002F9318 /* NSObject+MN.h */,
@@ -210,13 +232,9 @@
 				95BA04291DB5EFF7009FC4B7 /* test1ViewController.h */,
 				95BA042A1DB5EFF7009FC4B7 /* test1ViewController.m */,
 				95BA042B1DB5EFF7009FC4B7 /* test1ViewController.xib */,
-				95BA042E1DB5F54C009FC4B7 /* test.h */,
-				95BA042F1DB5F54C009FC4B7 /* test.m */,
 				95BA04361DB5FEEE009FC4B7 /* CollectBtn.h */,
 				95BA04371DB5FEEE009FC4B7 /* CollectBtn.m */,
 				95BA04341DB5FDF0009FC4B7 /* CollectBtn.xib */,
-				954D9D191DD2CE0700DB4447 /* MNNavigationViewController.h */,
-				954D9D1A1DD2CE0700DB4447 /* MNNavigationViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,6 +310,36 @@
 			);
 			name = "Log中文";
 			path = "../Log中文";
+			sourceTree = "<group>";
+		};
+		95E14D3B1DDD4BB9009D4B9F /* 封装view */ = {
+			isa = PBXGroup;
+			children = (
+				95E14D431DDD5430009D4B9F /* 二维码扫描 */,
+				95E14D421DDD540A009D4B9F /* 弹出视图-自定义view */,
+			);
+			path = "封装view";
+			sourceTree = "<group>";
+		};
+		95E14D421DDD540A009D4B9F /* 弹出视图-自定义view */ = {
+			isa = PBXGroup;
+			children = (
+				95E14D3F1DDD4D1E009D4B9F /* PopAnimation.h */,
+				95E14D401DDD4D1E009D4B9F /* PopAnimation.m */,
+				95E284A51DD5AEF000D8EA26 /* HomePresentationController.h */,
+				95E284A61DD5AEF000D8EA26 /* HomePresentationController.m */,
+			);
+			name = "弹出视图-自定义view";
+			sourceTree = "<group>";
+		};
+		95E14D431DDD5430009D4B9F /* 二维码扫描 */ = {
+			isa = PBXGroup;
+			children = (
+				95E14D441DDD5456009D4B9F /* QRcodeScanViewController.h */,
+				95E14D451DDD5456009D4B9F /* QRcodeScanViewController.m */,
+				95E14D461DDD5456009D4B9F /* QRcodeScanViewController.xib */,
+			);
+			name = "二维码扫描";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,9 +455,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95BA042D1DB5EFF7009FC4B7 /* test1ViewController.xib in Resources */,
+				95E14D4D1DDD7A09009D4B9F /* na1ViewController.xib in Resources */,
 				958367151D8F8E0C005E5E9A /* LaunchScreen.storyboard in Resources */,
 				95BA04351DB5FDF0009FC4B7 /* CollectBtn.xib in Resources */,
 				958367121D8F8E0C005E5E9A /* Assets.xcassets in Resources */,
+				95E14D521DDD7A20009D4B9F /* na2ViewController.xib in Resources */,
+				95E14D481DDD5456009D4B9F /* QRcodeScanViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,18 +535,21 @@
 			files = (
 				95BAD1B11D91139400F06947 /* NSArray+Log.m in Sources */,
 				95BA04381DB5FEEE009FC4B7 /* CollectBtn.m in Sources */,
-				954D9D251DD3073500DB4447 /* test2ViewController.m in Sources */,
 				9583670D1D8F8E0C005E5E9A /* ViewController.m in Sources */,
+				95E14D411DDD4D1E009D4B9F /* PopAnimation.m in Sources */,
 				95E284A71DD5AEF000D8EA26 /* HomePresentationController.m in Sources */,
 				9583670A1D8F8E0C005E5E9A /* AppDelegate.m in Sources */,
+				95E14D471DDD5456009D4B9F /* QRcodeScanViewController.m in Sources */,
 				958367071D8F8E0C005E5E9A /* main.m in Sources */,
 				954D9D1B1DD2CE0700DB4447 /* MNNavigationViewController.m in Sources */,
 				9583673A1D8F8E37005E5E9A /* MNUtil.m in Sources */,
-				95BA04301DB5F54C009FC4B7 /* test.m in Sources */,
 				95188D281D9280CC0065C1CC /* CircleProgressView.m in Sources */,
 				95BA042C1DB5EFF7009FC4B7 /* test1ViewController.m in Sources */,
+				95E14D551DDD9FAE009D4B9F /* MNNaviAnimation.m in Sources */,
+				95E14D511DDD7A20009D4B9F /* na2ViewController.m in Sources */,
 				958881081DACD175002F9318 /* NSObject+MN.m in Sources */,
 				95188D2B1D9292E10065C1CC /* XMGWaterflowLayout.m in Sources */,
+				95E14D4C1DDD7A09009D4B9F /* na1ViewController.m in Sources */,
 				954D9D221DD2FC9700DB4447 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				954D9D1E1DD2CE8100DB4447 /* LCNavigationController.m in Sources */,
 			);
