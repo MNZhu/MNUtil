@@ -1,0 +1,41 @@
+//
+//  MNUtil.pch
+//  MNUtil
+//
+//  Created by jacknan on 2016/9/21.
+//  Copyright © 2016年 jacknan. All rights reserved.
+//
+
+//#import "NSObject+Safe.h"
+#ifndef MNUtil_pch
+#define MNUtil_pch
+
+#ifdef __OBJC__
+
+
+#define ClearColor [UIColor clearColor]
+
+#else
+
+#endif
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* MNUtil_pch */
+#ifdef DEBUG
+#define LOG_TIME ({\
+NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];\
+[dateFormatter setDateStyle:NSDateFormatterMediumStyle];\
+[dateFormatter setTimeStyle:NSDateFormatterShortStyle];\
+[dateFormatter setDateFormat:@"HH:mm:ss:SS"]; \
+NSString *str = [dateFormatter stringFromDate:[NSDate date]];\
+(str);\
+})\
+
+#define MNLog(format, ...) printf("FILE: <%s:(%d)> FUNC: %s [%s] %s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [LOG_TIME UTF8String], [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] );
+#else
+#define MNLog(format, ...) //
+#endif

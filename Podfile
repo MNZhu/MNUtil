@@ -1,8 +1,18 @@
 platform :ios,'8.0'
 target 'MNUtil' do
-pod 'AFNetworking','~>3.0'
-pod 'MJExtension','3.0.13'
-pod 'Masonry','1.0.2'
-#pod 'SnapKit'
+use_frameworks!
+pod 'AFNetworking'
+pod 'MJExtension'
+pod 'Masonry'
+pod 'DateTools'
+pod 'YYCache'
+pod 'MJRefresh'
+#pod 'AsyncDisplayKit'
+pod 'UITableView+FDTemplateLayoutCell'
+pod 'FMDB'
+pod 'ReactiveCocoa'
+#pod 'YYCategories'
+pod 'PLCrashReporter'
+pod 'Aspects'
 end
 

@@ -1,0 +1,6 @@
+framework module Pods_MNUtil {
+  umbrella header "Pods-MNUtil-umbrella.h"
+
+  export *
+  module * { export * }
+}
