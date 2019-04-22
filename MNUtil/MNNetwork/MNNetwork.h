@@ -18,7 +18,7 @@ typedef void(^progressBlock)(NSProgress * _Nonnull downloadProgress);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ABSNetwork : NSObject
+@interface MNNetwork : NSObject
 
 @property (nonatomic, strong, readonly) AFHTTPSessionManager *sessionManager;
 

@@ -11,8 +11,6 @@
 #import <CrashReporter/PLCrashReportTextFormatter.h>
 #import <Aspects/Aspects.h>
 #import <MJExtension/MJExtension.h>
-#import "ABSNetwork.h"
-#import "TestReq.h"
 
 @interface AppDelegate ()
 
@@ -92,20 +90,11 @@ void post_callback(siginfo_t *info, ucontext_t *uap, void *context)
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    TestReq *req = [TestReq new];
-    static ABSNetwork *net = [[ABSNetwork alloc]init];
     
-    [net GETWithReq:req success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable ResponseData, BaseRsp * _Nullable baseRsp) {
-        NSLog(@"%@",ResponseData);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-    }];
-    
-    
-    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    BaseTabBarViewController *vc = [[BaseTabBarViewController alloc]init];
-    [_window setRootViewController:vc];
-    [_window makeKeyAndVisible];
+//    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    BaseTabBarViewController *vc = [[BaseTabBarViewController alloc]init];
+//    [_window setRootViewController:vc];
+//    [_window makeKeyAndVisible];
 //
 //    //版本检测
 //    [self versionSet];

@@ -6,16 +6,16 @@
 //  Copyright © 2019 jacknan. All rights reserved.
 //
 
-#import "ABSNetwork.h"
+#import "MNNetwork.h"
 #import <MJExtension/MJExtension.h>
 
-@interface ABSNetwork ()
+@interface MNNetwork ()
 
 @property (nonatomic, strong) AFHTTPSessionManager *sessionManager;
 
 @end
 
-@implementation ABSNetwork
+@implementation MNNetwork
 
 - (instancetype)init
 {

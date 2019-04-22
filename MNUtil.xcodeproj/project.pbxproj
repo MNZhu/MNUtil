@@ -23,10 +23,11 @@
 		958367201D8F8E0C005E5E9A /* MNUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583671F1D8F8E0C005E5E9A /* MNUtilTests.m */; };
 		9583672B1D8F8E0C005E5E9A /* MNUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */; };
 		97155B68224CCF2C00DE5AF1 /* BaseRsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 97155B67224CCF2C00DE5AF1 /* BaseRsp.m */; };
-		9736210E22657CAC00A27642 /* TestRsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736210D22657CAC00A27642 /* TestRsp.m */; };
-		9736211122657DE000A27642 /* TestReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 9736211022657DE000A27642 /* TestReq.m */; };
-		97B8F02F226086250049C33B /* ABSNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F02E226086250049C33B /* ABSNetwork.m */; };
+		979A77CA226D981200276CC7 /* MNLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 979A77C9226D981200276CC7 /* MNLogManager.m */; };
+		97B8F02F226086250049C33B /* MNNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F02E226086250049C33B /* MNNetwork.m */; };
 		97B8F0322260875E0049C33B /* BaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F0312260875E0049C33B /* BaseReq.m */; };
+		97E826502265C8B400AFA48C /* viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8264F2265C8B400AFA48C /* viewController.m */; };
+		97E826522265C8CD00AFA48C /* viewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E826512265C8CD00AFA48C /* viewController.storyboard */; };
 		A28B94E0B4361F8936DB3497 /* Pods_MNUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBE2B5ED206D27234CF28D8 /* Pods_MNUtil.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,14 +88,15 @@
 		9594BF811E827BAF006D8A1C /* MNUtil-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNUtil-Bridging-Header.h"; sourceTree = "<group>"; };
 		97155B66224CCF2C00DE5AF1 /* BaseRsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRsp.h; sourceTree = "<group>"; };
 		97155B67224CCF2C00DE5AF1 /* BaseRsp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRsp.m; sourceTree = "<group>"; };
-		9736210C22657CAC00A27642 /* TestRsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRsp.h; sourceTree = "<group>"; };
-		9736210D22657CAC00A27642 /* TestRsp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRsp.m; sourceTree = "<group>"; };
-		9736210F22657DE000A27642 /* TestReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestReq.h; sourceTree = "<group>"; };
-		9736211022657DE000A27642 /* TestReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestReq.m; sourceTree = "<group>"; };
-		97B8F02D226086250049C33B /* ABSNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABSNetwork.h; sourceTree = "<group>"; };
-		97B8F02E226086250049C33B /* ABSNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABSNetwork.m; sourceTree = "<group>"; };
+		979A77C8226D981200276CC7 /* MNLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNLogManager.h; sourceTree = "<group>"; };
+		979A77C9226D981200276CC7 /* MNLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLogManager.m; sourceTree = "<group>"; };
+		97B8F02D226086250049C33B /* MNNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNNetwork.h; sourceTree = "<group>"; };
+		97B8F02E226086250049C33B /* MNNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNetwork.m; sourceTree = "<group>"; };
 		97B8F0302260875E0049C33B /* BaseReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseReq.h; sourceTree = "<group>"; };
 		97B8F0312260875E0049C33B /* BaseReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseReq.m; sourceTree = "<group>"; };
+		97E8264E2265C8B400AFA48C /* viewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viewController.h; sourceTree = "<group>"; };
+		97E8264F2265C8B400AFA48C /* viewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viewController.m; sourceTree = "<group>"; };
+		97E826512265C8CD00AFA48C /* viewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = viewController.storyboard; sourceTree = "<group>"; };
 		FF310BD06385030E5D6435CA /* Pods-MNUtil.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNUtil.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MNUtil/Pods-MNUtil.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,9 @@
 		950021CC1FBAD7440013D4D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				97E8264E2265C8B400AFA48C /* viewController.h */,
+				97E8264F2265C8B400AFA48C /* viewController.m */,
+				97E826512265C8CD00AFA48C /* viewController.storyboard */,
 				950021DF1FBAD8E20013D4D1 /* MNUtil.entitlements */,
 				9500221F1FBADBAE0013D4D1 /* Launch Screen.storyboard */,
 				950021DD1FBAD7820013D4D1 /* Assets.xcassets */,
@@ -190,10 +195,6 @@
 				950021D01FBAD7440013D4D1 /* Info.plist */,
 				950021D11FBAD7440013D4D1 /* main.m */,
 				950021D31FBAD7440013D4D1 /* MNUtil.pch */,
-				9736210C22657CAC00A27642 /* TestRsp.h */,
-				9736210D22657CAC00A27642 /* TestRsp.m */,
-				9736210F22657DE000A27642 /* TestReq.h */,
-				9736211022657DE000A27642 /* TestReq.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -250,7 +251,8 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
-				97155B65224CCEE900DE5AF1 /* NetworkUtil */,
+				979A77C7226D97EE00276CC7 /* MNLog */,
+				97155B65224CCEE900DE5AF1 /* MNNetwork */,
 				950022211FBADC200013D4D1 /* BaseClass */,
 				950021BF1FBAD6BA0013D4D1 /* 第三方库 */,
 				954E859F1DDAAE9800BB575E /* 工具类 */,
@@ -277,17 +279,26 @@
 			path = MNUtilUITests;
 			sourceTree = "<group>";
 		};
-		97155B65224CCEE900DE5AF1 /* NetworkUtil */ = {
+		97155B65224CCEE900DE5AF1 /* MNNetwork */ = {
 			isa = PBXGroup;
 			children = (
 				97B8F0302260875E0049C33B /* BaseReq.h */,
 				97B8F0312260875E0049C33B /* BaseReq.m */,
 				97155B66224CCF2C00DE5AF1 /* BaseRsp.h */,
 				97155B67224CCF2C00DE5AF1 /* BaseRsp.m */,
-				97B8F02D226086250049C33B /* ABSNetwork.h */,
-				97B8F02E226086250049C33B /* ABSNetwork.m */,
+				97B8F02D226086250049C33B /* MNNetwork.h */,
+				97B8F02E226086250049C33B /* MNNetwork.m */,
 			);
-			path = NetworkUtil;
+			path = MNNetwork;
+			sourceTree = "<group>";
+		};
+		979A77C7226D97EE00276CC7 /* MNLog */ = {
+			isa = PBXGroup;
+			children = (
+				979A77C8226D981200276CC7 /* MNLogManager.h */,
+				979A77C9226D981200276CC7 /* MNLogManager.m */,
+			);
+			path = MNLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +366,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MN;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = jacknan;
 				TargetAttributes = {
 					958367011D8F8E0C005E5E9A = {
@@ -385,12 +396,12 @@
 			};
 			buildConfigurationList = 958366FD1D8F8E0C005E5E9A /* Build configuration list for PBXProject "MNUtil" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 958366F91D8F8E0C005E5E9A;
 			productRefGroup = 958367031D8F8E0C005E5E9A /* Products */;
@@ -410,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950022201FBADBAE0013D4D1 /* Launch Screen.storyboard in Resources */,
+				97E826522265C8CD00AFA48C /* viewController.storyboard in Resources */,
 				950021DE1FBAD7830013D4D1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,18 +512,18 @@
 				950021DC1FBAD7640013D4D1 /* LCNavigationController.m in Sources */,
 				950021CB1FBAD6BA0013D4D1 /* XMGWaterflowLayout.m in Sources */,
 				9500222D1FBADCC60013D4D1 /* BaseViewController.m in Sources */,
+				97E826502265C8B400AFA48C /* viewController.m in Sources */,
 				950021CA1FBAD6BA0013D4D1 /* NSArray+Log.m in Sources */,
 				950022241FBADC7C0013D4D1 /* BaseTabBarViewController.m in Sources */,
 				97B8F0322260875E0049C33B /* BaseReq.m in Sources */,
-				97B8F02F226086250049C33B /* ABSNetwork.m in Sources */,
-				9736210E22657CAC00A27642 /* TestRsp.m in Sources */,
+				97B8F02F226086250049C33B /* MNNetwork.m in Sources */,
 				9500222A1FBADCB70013D4D1 /* BaseNavigationController.m in Sources */,
 				950022271FBADC990013D4D1 /* BaseNavigationBar.m in Sources */,
 				950021DB1FBAD7640013D4D1 /* MNUtil.m in Sources */,
-				9736211122657DE000A27642 /* TestReq.m in Sources */,
 				950021C91FBAD6BA0013D4D1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				950021D61FBAD7440013D4D1 /* main.m in Sources */,
 				950021D41FBAD7440013D4D1 /* AppDelegate.mm in Sources */,
+				979A77CA226D981200276CC7 /* MNLogManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +563,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -560,6 +573,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -567,6 +581,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -606,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -615,6 +631,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -622,6 +639,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

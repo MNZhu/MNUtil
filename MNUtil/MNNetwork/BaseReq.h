@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <MJExtension/MJExtension.h>
-#import "ABSNetwork.h"
+#import "MNNetwork.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseReq : NSObject

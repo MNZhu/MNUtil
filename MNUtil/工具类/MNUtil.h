@@ -22,9 +22,6 @@
 #define MN_Log(...)
 #endif
 
-
-#define MNCOLOR_P3(r,g,b,a) [UIColor colorWithDisplayP3Red:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-
 #define MNCOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 
@@ -146,65 +143,6 @@
 /// 获得文字的尺寸
 + (CGSize)getContentSize:(NSString * _Nullable)content withCGSize:(CGSize)size withFont:(NSFont* _Nullable)font;
 
-
-
-
-/**
- GET请求数据
-
- @param url          完整url
- @param para         请求参数
- @param successblock 请求成功返回参数
- @param failblock   请求失败返回参数
- */
-
-+(void)GETwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock FailBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress)) progressblock;
-
-
-/**
- POST请求数据
- 
- @param url          完整url
- @param para         请求参数
- @param successblock 请求成功返回参数
- @param failblock   请求失败返回参数
- */
-+(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
-
-
-/**
- POST上传 带data数据
-
- @param url           完整url
- @param para          请求参数
- @param BodywithBlock data数据block
- @param successblock  请求成功
- @param failblock     请求失败
- @param progressblock 下载进度
- */
-+(void)POSTwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para constructingBodyWithBlock:(void(^ _Nullable)(id<AFMultipartFormData>  _Nonnull formData))BodywithBlock successBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock Progress:(void(^ _Nullable)(NSProgress * _Nonnull downloadProgress))progressblock;
-
-
-/**
- DELETE请求
-
- @param url          完整url
- @param para         请求参数
- @param successblock 完成回调
- @param failblock    失败回调
- */
-+(void)DELETEwithUrl:(NSString* _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
-
-
-/**
- PUT请求
-
- @param url          完整url
- @param para         请求参数
- @param successblock 完成回调
- @param failblock    失败回调
- */
-+(void)PUTwithUrl:(NSString * _Nonnull)url param:(NSDictionary* _Nullable)para uccessBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nonnull task,id _Nullable ResponseData))successblock failBlock:(void(^ _Nullable)(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failblock;
 @end
 
 

@@ -55,6 +55,7 @@ typedef enum {
  *
  * Indicates the architecture under which a Crash Log was generated.
  *
+
  * @deprecated The architecture value has been deprecated in v1.1 and later crash reports. All new reports
  * will make use of the new PLCrashReportProcessorInfo CPU type encodings.
  *
