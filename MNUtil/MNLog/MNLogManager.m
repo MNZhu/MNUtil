@@ -48,11 +48,6 @@ NSString * const LevelDsc[] = {
     return LevelDsc[level];
 }
 
-+ (void)logwithString:(NSString *)logStr Level:(MNLogLevel)level
-{
-    MNLOG(level, @"%@",logStr)
-}
-
 + (void)logwithLevel:(MNLogLevel)level File:(const char *)fileName Line:(int)line string:(NSString *)logStr, ...
 {
     va_list ap;
@@ -94,7 +89,7 @@ NSString * const LevelDsc[] = {
         self.fileManager = [NSFileManager defaultManager];
         NSLog(@"logFilePath:%@",self.logFilePath);
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(closeFile) name:UIApplicationWillTerminateNotification object:nil];
-//        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(closeFile) name:UIApplicationDidEnterBackgroundNotification object:nil];
+        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(closeFile) name:UIApplicationDidEnterBackgroundNotification object:nil];
         self.syncNum = 0;
     }
     return self;
@@ -103,11 +98,10 @@ NSString * const LevelDsc[] = {
 - (void)closeFile
 {
     typeof(self) weakSelf = self;
-    
     dispatch_barrier_async(self.queue, ^{
-        NSData *data = [@"\n\n--------------- exit! --------------\n" dataUsingEncoding:NSUTF8StringEncoding];
-        [weakSelf.fileHandle seekToEndOfFile];
-        [weakSelf.fileHandle writeData:data];
+//        NSData *data = [@"\n\n--------------- exit! --------------\n" dataUsingEncoding:NSUTF8StringEncoding];
+//        [weakSelf.fileHandle seekToEndOfFile];
+//        [weakSelf.fileHandle writeData:data];
         [weakSelf.fileHandle synchronizeFile];
         [weakSelf.fileHandle closeFile];
         weakSelf.fileHandle = nil;

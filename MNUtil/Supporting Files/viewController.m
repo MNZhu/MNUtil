@@ -8,6 +8,7 @@
 
 #import "viewController.h"
 #import "MNLogManager.h"
+#import "MNConfigViewController.h"
 
 @interface viewController ()
 
@@ -22,12 +23,8 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    
-    int i = 1000;
-    while (i--) {
-        MNLOG_DEBUG(@"测试打印 %d",i);
-    }
-    NSLog(@"end");
+    MNConfigViewController *vc = [[MNConfigViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*
