@@ -14,5 +14,6 @@ pod 'ReactiveCocoa'
 #pod 'YYCategories'
 pod 'PLCrashReporter'
 pod 'Aspects'
+pod 'KSCrash'
 end
 

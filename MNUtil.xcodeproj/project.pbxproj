@@ -26,6 +26,8 @@
 		978A6682226EDF7400991326 /* MNConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A6681226EDF7400991326 /* MNConfigViewController.m */; };
 		978A6688226EFA6100991326 /* MNConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A6687226EFA6100991326 /* MNConfigModel.m */; };
 		979A77CA226D981200276CC7 /* MNLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 979A77C9226D981200276CC7 /* MNLogManager.m */; };
+		97AC08982277DEC6007E5980 /* MNAppLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC08972277DEC6007E5980 /* MNAppLogViewController.m */; };
+		97AC089E22782618007E5980 /* MNPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC089D22782618007E5980 /* MNPickerView.m */; };
 		97B8F02F226086250049C33B /* MNNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F02E226086250049C33B /* MNNetwork.m */; };
 		97B8F0322260875E0049C33B /* BaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F0312260875E0049C33B /* BaseReq.m */; };
 		97E826502265C8B400AFA48C /* viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8264F2265C8B400AFA48C /* viewController.m */; };
@@ -97,6 +99,10 @@
 		978A6687226EFA6100991326 /* MNConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNConfigModel.m; sourceTree = "<group>"; };
 		979A77C8226D981200276CC7 /* MNLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNLogManager.h; sourceTree = "<group>"; };
 		979A77C9226D981200276CC7 /* MNLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLogManager.m; sourceTree = "<group>"; };
+		97AC08962277DEC6007E5980 /* MNAppLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAppLogViewController.h; sourceTree = "<group>"; };
+		97AC08972277DEC6007E5980 /* MNAppLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAppLogViewController.m; sourceTree = "<group>"; };
+		97AC089C22782618007E5980 /* MNPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPickerView.h; sourceTree = "<group>"; };
+		97AC089D22782618007E5980 /* MNPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNPickerView.m; sourceTree = "<group>"; };
 		97B8F02D226086250049C33B /* MNNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNNetwork.h; sourceTree = "<group>"; };
 		97B8F02E226086250049C33B /* MNNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNetwork.m; sourceTree = "<group>"; };
 		97B8F0302260875E0049C33B /* BaseReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseReq.h; sourceTree = "<group>"; };
@@ -317,6 +323,10 @@
 			children = (
 				979A77C8226D981200276CC7 /* MNLogManager.h */,
 				979A77C9226D981200276CC7 /* MNLogManager.m */,
+				97AC08962277DEC6007E5980 /* MNAppLogViewController.h */,
+				97AC08972277DEC6007E5980 /* MNAppLogViewController.m */,
+				97AC089C22782618007E5980 /* MNPickerView.h */,
+				97AC089D22782618007E5980 /* MNPickerView.m */,
 			);
 			path = MNLog;
 			sourceTree = "<group>";
@@ -474,6 +484,7 @@
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -489,6 +500,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
@@ -530,6 +542,7 @@
 			files = (
 				97155B68224CCF2C00DE5AF1 /* BaseRsp.m in Sources */,
 				950021DC1FBAD7640013D4D1 /* LCNavigationController.m in Sources */,
+				97AC08982277DEC6007E5980 /* MNAppLogViewController.m in Sources */,
 				950021CB1FBAD6BA0013D4D1 /* XMGWaterflowLayout.m in Sources */,
 				9500222D1FBADCC60013D4D1 /* BaseViewController.m in Sources */,
 				97E826502265C8B400AFA48C /* viewController.m in Sources */,
@@ -544,6 +557,7 @@
 				978A6682226EDF7400991326 /* MNConfigViewController.m in Sources */,
 				950021C91FBAD6BA0013D4D1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				950021D61FBAD7440013D4D1 /* main.m in Sources */,
+				97AC089E22782618007E5980 /* MNPickerView.m in Sources */,
 				950021D41FBAD7440013D4D1 /* AppDelegate.mm in Sources */,
 				979A77CA226D981200276CC7 /* MNLogManager.m in Sources */,
 			);

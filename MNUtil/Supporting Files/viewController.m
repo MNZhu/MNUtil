@@ -9,6 +9,7 @@
 #import "viewController.h"
 #import "MNLogManager.h"
 #import "MNConfigViewController.h"
+#import "MNAppLogViewController.h"
 
 @interface viewController ()
 
@@ -18,13 +19,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    int i = 100;
+    while (i--) {
+        MNLOG_DEBUG(@"测试日志测测试日志测试日志测试日志测测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志");
+    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+//    MNAppLogViewController *vc = [[MNAppLogViewController alloc] init];
+//    [self presentViewController:vc animated:YES completion:nil];
+   
     MNConfigViewController *vc = [[MNConfigViewController alloc] init];
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    MNLOG_ERROR(@"测试日志测测试日志测试日");
 }
 
 /*

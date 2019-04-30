@@ -17,16 +17,31 @@
 
 @implementation MNNetwork
 
+- (void)dealloc
+{
+    [self.sessionManager invalidateSessionCancelingTasks:YES];
+}
+
++ (instancetype)shareInstance
+{
+    static MNNetwork *_instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[MNNetwork alloc] init];
+    });
+    return _instance;
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [self setupSessionManager];
+        [self setupDefaultSessionManager];
     }
     return self;
 }
 
-- (void)setupSessionManager
+- (void)setupDefaultSessionManager
 {
     //requestSerializer
     self.sessionManager = [[AFHTTPSessionManager alloc]initWithBaseURL:nil];
@@ -45,10 +60,10 @@
     [self.sessionManager invalidateSessionCancelingTasks:YES];
 }
 
-- (nullable NSURLSessionDataTask *)GETWithReq:(BaseReq *)req
-                                      success:(successBlock)success
-                                      failure:(failureBlock)failure
-                                     Progress:(nullable progressBlock) progress
+- (nullable NSURLSessionDataTask *)GET:(BaseReq *)req
+                               success:(successBlock)success
+                               failure:(failureBlock)failure
+                              Progress:(nullable progressBlock) progress
 {
     Class cls = [req rspClass];
     req.dataTask = [self.sessionManager GET:req.reqUrl parameters:req.mj_keyValues progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -58,17 +73,17 @@
     return req.dataTask;
 }
 
-- (nullable NSURLSessionDataTask *)GETWithReq:(BaseReq *)req
-                                      success:(successBlock)success
-                                      failure:(failureBlock)failure
+- (nullable NSURLSessionDataTask *)GET:(BaseReq *)req
+                               success:(successBlock)success
+                               failure:(failureBlock)failure
 {
-    return [self GETWithReq:req success:success failure:failure Progress:nil];
+    return [self GET:req success:success failure:failure Progress:nil];
 }
 
-- (nullable NSURLSessionDataTask *)POSTWithReq:(BaseReq *)req
-                                       success:(successBlock)success
-                                       failure:(failureBlock)failure
-                                      Progress:(nullable progressBlock) progress
+- (nullable NSURLSessionDataTask *)POST:(BaseReq *)req
+                                success:(successBlock)success
+                                failure:(failureBlock)failure
+                               Progress:(nullable progressBlock) progress
 {
     Class cls = [req rspClass];
     req.dataTask = [self.sessionManager POST:req.reqUrl parameters:req.mj_keyValues progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -78,18 +93,18 @@
     return req.dataTask;
 }
 
-- (nullable NSURLSessionDataTask *)POSTWithReq:(BaseReq *)req
-                                       success:(successBlock)success
-                                       failure:(failureBlock)failure
+- (nullable NSURLSessionDataTask *)POST:(BaseReq *)req
+                                success:(successBlock)success
+                                failure:(failureBlock)failure
 {
-    return [self POSTWithReq:req success:success failure:failure Progress:nil];
+    return [self POST:req success:success failure:failure Progress:nil];
 }
 
-- (nullable NSURLSessionDataTask *)POSTWithReq:(BaseReq *)req
-                     constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
-                                       success:(successBlock)success
-                                       failure:(failureBlock)failure
-                                      Progress:(void (^)(NSProgress * _Nonnull uploadProgress))progress
+- (nullable NSURLSessionDataTask *)POST:(BaseReq *)req
+              constructingBodyWithBlock:(nullable void (^)(id <AFMultipartFormData> formData))block
+                                success:(successBlock)success
+                                failure:(failureBlock)failure
+                               Progress:(void (^)(NSProgress * _Nonnull uploadProgress))progress
 {
     Class cls = [req rspClass];
     req.dataTask = [self.sessionManager POST:req.reqUrl parameters:req.mj_keyValues constructingBodyWithBlock:block progress:progress success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -99,10 +114,10 @@
     return req.dataTask;
 }
 
-- (nullable NSURLSessionDataTask *)PUTWithReq:(BaseReq *)req
-                                      success:(successBlock)success
-                                      failure:(failureBlock)failure
-                                     Progress:(progressBlock) progress
+- (nullable NSURLSessionDataTask *)PUT:(BaseReq *)req
+                               success:(successBlock)success
+                               failure:(failureBlock)failure
+                              Progress:(progressBlock) progress
 {
     Class cls = [req rspClass];
     req.dataTask = [self.sessionManager PUT:req.reqUrl parameters:req.mj_keyValues success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -112,10 +127,10 @@
     return req.dataTask;
 }
 
-- (nullable NSURLSessionDataTask *)DELETEWithReq:(BaseReq *)req
-                                         success:(successBlock)success
-                                         failure:(failureBlock)failure
-                                        Progress:(progressBlock) progress
+- (nullable NSURLSessionDataTask *)DELETE:(BaseReq *)req
+                                  success:(successBlock)success
+                                  failure:(failureBlock)failure
+                                 Progress:(progressBlock) progress
 {
     Class cls = [req rspClass];
     req.dataTask = [self.sessionManager DELETE:req.reqUrl parameters:req.mj_keyValues success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

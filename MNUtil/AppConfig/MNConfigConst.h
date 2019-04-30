@@ -11,5 +11,6 @@ static NSString *const BaseUrl = @"BaseUrl";
 static NSString *const Version = @"Version";
 static NSString *const Build = @"Build";
 static NSString *const ShowGuidePage = @"显示导航页";
-static NSString *const Language = @"语言";
-
+static NSString *const Language = @"Language";
+static NSString *const AppLogFiles = @"AppLogFiles";
+static NSString *const AppLogLevel = @"AppLogLevel";

@@ -9,6 +9,9 @@
 #import "MNConfigViewController.h"
 #import "MNConfigConst.h"
 #import "MNConfigModel.h"
+#import "MNAppLogViewController.h"
+#import "MNPickerView.h"
+#import "MNLogManager.h"
 
 @interface MNConfigViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -25,16 +28,21 @@
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        UINavigationController *na = [[UINavigationController alloc]initWithRootViewController:self];
+        return (MNConfigViewController *)na;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//    [userDefaults setObject:@"https://jacknan.top" forKey:BaseUrl];
-//    [userDefaults setObject:@"v1.0.21" forKey:Version];
-//    [userDefaults setObject:@NO forKey:ShowGuidePage];
-    
-    [self initConfigs];
-    [self initView];
+    [self initConfigs];    //初始化配置项
+    [self initView];       //初始化view
 }
 
 - (void)initConfigs
@@ -56,7 +64,14 @@
     [self addConfigModelWithKey:ShowGuidePage ConfigType:ConfigTypeSwitch];
     
     //language
-    [self addConfigModelWithKey:Language ConfigType:ConfigTypeNone];
+    [self addConfigModelWithKey:Language ConfigType:ConfigTypeArrow];
+    
+    //app log level
+    NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:@"AppLogLevel"];
+    [self addConfigModelWithKey:AppLogLevel ConfigType:ConfigTypeArrow Value:[MNLogManager getLevelTypeString:num.integerValue]];
+    
+    //app log
+    [self addConfigModelWithKey:AppLogFiles ConfigType:ConfigTypeArrow];
 }
 
 - (void)addConfigModelWithKey:(NSString *)key ConfigType:(ConfigType)type Value:(id)value
@@ -81,21 +96,13 @@
 - (void)initView
 {
     self.view.backgroundColor = UIColor.blackColor;
+    self.title = @"配置";
     [UIApplication.sharedApplication setStatusBarHidden:NO];
-    //navigation bar
-    UINavigationBar *navBar = [[UINavigationBar alloc] init];
-    [navBar setBackgroundColor:[UIColor grayColor]];
-    navBar.backgroundColor = UIColor.blackColor;
-    navBar.frame = CGRectMake(0, UIApplication.sharedApplication.statusBarFrame.size.height, self.view.bounds.size.width, 44);
-    //topItem
-    UINavigationItem *topItem = [[UINavigationItem alloc]initWithTitle:@"配置"];
-    [navBar pushNavigationItem:topItem animated:NO];
     //backBtn
-    topItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(backAction)];
     //completeBtn
-    topItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(completeAction)];
-    [topItem.rightBarButtonItem setTintColor:[UIColor redColor]];
-    [self.view addSubview:navBar];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(completeAction)];
+    [self.navigationItem.rightBarButtonItem setTintColor:[UIColor redColor]];
     //table view
     UITableView *tableView = [[UITableView alloc] init];
     self.tableView = tableView;
@@ -104,8 +111,8 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.rowHeight = 44;
-    tableView.frame = CGRectMake(0, CGRectGetMaxY(navBar.frame), self.view.bounds.size.width, self.view.bounds.size.height - navBar.bounds.size.height);
-    [self.view insertSubview:tableView belowSubview:navBar];
+    tableView.frame = CGRectMake(0, CGRectGetMaxY(self.navigationController.navigationBar.frame), self.view.bounds.size.width, self.view.bounds.size.height - self.navigationController.navigationBar.bounds.size.height);
+    [self.view addSubview:tableView];
 }
 
 - (void)backAction
@@ -117,11 +124,29 @@
 - (void)completeAction
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-
     for (MNConfigModel *model in self.configArr) {
         [userDefaults setObject:model.value forKey:model.key];
     }
     [self backAction];
+}
+
+#pragma mark UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    typeof(self) weakSelf = self;
+    MNConfigModel *model = self.configArr[indexPath.row];
+    if ([model.key isEqualToString:AppLogFiles]) {
+        MNAppLogViewController *vc = [[MNAppLogViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    if ([model.key isEqualToString:AppLogLevel]) {
+        [MNPickerView showInView:UIApplication.sharedApplication.keyWindow WithTitleArr:@[@"None",@"Debug",@"Info",@"Warring",@"Error"] Complete:^(NSInteger index) {
+            [NSUserDefaults.standardUserDefaults setObject:@(index) forKey:@"AppLogLevel"];
+            model.value = [MNLogManager getLevelTypeString:index];
+            [weakSelf.tableView reloadData];
+        }];
+    }
 }
 
 #pragma mark UITableViewDataSource
@@ -153,7 +178,7 @@
         {
             cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         }
-        break;
+            break;
         case ConfigTypeLabel:
         {
             UILabel *lab = [[UILabel alloc] init];
@@ -186,7 +211,19 @@
             [cell addSubview:switchBtn];
         }
             break;
-            
+        case ConfigTypeArrow:
+        {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            if ([model.value isKindOfClass:[NSString class]]) {
+                UILabel *la = [[UILabel alloc] init];
+                la.text = model.value;
+                la.textColor = UIColor.lightGrayColor;
+                la.textAlignment = NSTextAlignmentRight;
+                la.frame = CGRectMake(width - 110, 0, 80, height);
+                [cell addSubview:la];
+            }
+        }
+            break;
         default:
             break;
     }
@@ -198,7 +235,7 @@
     [cell addSubview:line];
     return cell;
 }
-
+//所有带switch按钮的cell都走这里
 - (void)switchAction:(UISwitch *)switchBtn
 {
     UITableViewCell *cell = (UITableViewCell *)switchBtn.superview;
@@ -207,6 +244,7 @@
     model.value = @(switchBtn.isOn);
 }
 
+//所有带textfield的cell都走这
 - (void)textfieldChanged:(NSNotification *)noti
 {
     UITextField *tf = noti.object;
@@ -225,4 +263,6 @@
 {
     [self.view endEditing:YES];
 }
+
+
 @end

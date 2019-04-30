@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define LOG_FILE_MAX_SIZE        10 //MB  日志本地存储的最大值
-#define App_Current_Log_Level    MNLogLevelInfo  //当前日志等级
+#define LOG_FILE_MAX_COUNT        4              //日志文件的最大数量
+#define LOG_FILE_SIZE             3               //每个日志文件大小 MB
 
 /**
  本地日志宏调用写入方法
@@ -23,10 +23,11 @@
 
 
 typedef NS_OPTIONS(NSUInteger, MNLogLevel) {
-    MNLogLevelDebug    = 1 << 0,
-    MNLogLevelInfo     = 1 << 1,
-    MNLogLevelWarning  = 1 << 2,
-    MNLogLevelError    = 1 << 3
+    MNLogLevelNone     = 0,     //不输出log
+    MNLogLevelDebug,
+    MNLogLevelInfo,
+    MNLogLevelWarning,
+    MNLogLevelError
 };
 
 
@@ -34,11 +35,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MNLogManager : NSObject
 
+@property (nonatomic, assign) MNLogLevel currentLogLevel;
+
 + (instancetype)shareInstance;
 
 + (void)logwithLevel:(MNLogLevel)level File:(const char *)fileName Line:(int)line string:(NSString *)logStr, ... NS_FORMAT_FUNCTION(4, 5);
 
 + (void)logwithLevel:(MNLogLevel)level File:(const char *)fileName Line:(int)line string:(NSString *)logStr arguments:(va_list)argList NS_FORMAT_FUNCTION(4,0);
+
+/**
+ 获取所有日志文件的绝对路径 并按照日期升序排序
+ 
+ @return 路径数组 string
+ */
++ (NSArray *)getAllAppLogFilePath;
+
++ (NSString *)getLevelTypeString:(MNLogLevel)level;
+
 @end
 
 NS_ASSUME_NONNULL_END

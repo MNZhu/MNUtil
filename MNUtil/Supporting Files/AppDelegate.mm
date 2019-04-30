@@ -11,6 +11,9 @@
 #import <CrashReporter/PLCrashReportTextFormatter.h>
 #import <Aspects/Aspects.h>
 #import <MJExtension/MJExtension.h>
+#import <KSCrash/KSCrash.h>
+#import <KSCrashInstallationStandard.h>
+#import "MNLogManager.h"
 
 @interface AppDelegate ()
 
@@ -88,8 +91,49 @@ void post_callback(siginfo_t *info, ucontext_t *uap, void *context)
     printf("%s",context);
 }
 
+void onCrash(const KSCrashReportWriter* writer)
+{
+    NSLog(@"崩溃了");
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    KSCrash* handler = [KSCrash sharedInstance];
+    
+    handler.deadlockWatchdogInterval = 5.0f;
+    handler.catchZombies = YES;
+    //    handler.addConsoleLogToReport = YES;
+    //    handler.printPreviousLog = YES;
+    handler.onCrash = onCrash;
+//    handler.userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+//                        @"\"quote\"", @"quoted value",
+//                        @"blah", @"\"quoted\" key",
+//                        @"bslash\\", @"bslash value",
+//                        @"x", @"bslash\\key",
+//                        @"intl", @"テスト",
+//                        nil];
+    
+    // Don't delete after send for this demo.
+//    handler.deleteBehaviorAfterSendAll = KSCDeleteNever;
+    
+    [handler install];
+    
+    KSCrashInstallationStandard *ks = [KSCrashInstallationStandard sharedInstance];
+    ks.onCrash = onCrash;
+//    [ks setAddConsoleLogToReport:YES];
+//
+//    ks.url = [NSURL URLWithString:@""];
+//    [ks sendAllReportsWithCompletion:^(NSArray *filteredReports, BOOL completed, NSError *error) {
+//        for (NSDictionary *ID in filteredReports) {
+//            MNLog(@"%@",ID);
+//        }
+//    }];
+//    ks.userInfo = @{};
+//    [ks install];
+//
+    
+    
+    
     
 //    _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 //    BaseTabBarViewController *vc = [[BaseTabBarViewController alloc]init];

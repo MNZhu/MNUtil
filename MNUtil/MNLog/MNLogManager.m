@@ -9,10 +9,11 @@
 #import "MNLogManager.h"
 #import <UIKit/UIKit.h>
 
-#define LOG_DIRECTORY [NSString stringWithFormat:@"%@/Documents",NSHomeDirectory()]
+#define LOG_DIRECTORY [NSString stringWithFormat:@"%@/Documents/AppLog",NSHomeDirectory()]
 #define DATE [[MNLogManager shareInstance] getDate]
 
-NSString * const LevelDsc[] = {
+NSString * _Nullable const LevelDsc[] = {
+    [MNLogLevelNone] = @"None",
     [MNLogLevelDebug] = @"Debug",
     [MNLogLevelInfo] = @"Info",
     [MNLogLevelWarning] = @"Warning",
@@ -25,8 +26,8 @@ NSString * const LevelDsc[] = {
 @property (nonatomic, strong) NSFileHandle *fileHandle;
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSFileManager *fileManager;
-@property (nonatomic, strong) NSString *logFilePath;
-@property (nonatomic, strong) NSString *oldLogFilePath;
+@property (nonatomic, strong) NSString *currentLogFilePath;
+
 @end
 
 @implementation MNLogManager
@@ -39,6 +40,7 @@ NSString * const LevelDsc[] = {
                   ^() {
                       _instance = [[MNLogManager alloc] init];
                       _instance.queue = dispatch_queue_create("MNLogManager", DISPATCH_QUEUE_SERIAL);
+                      _instance.currentLogLevel = MNLogLevelError;
                   });
     return _instance;
 }
@@ -58,6 +60,9 @@ NSString * const LevelDsc[] = {
 
 + (void)logwithLevel:(MNLogLevel)level File:(const char *)fileName Line:(int)line string:(NSString *)logStr arguments:(va_list)argList
 {
+    if (level == MNLogLevelNone) {
+        return;
+    }
     NSString *context = [[NSString alloc] initWithFormat:logStr arguments:argList];
     MNLogManager *tool = [MNLogManager shareInstance];
     dispatch_barrier_async(tool.queue, ^{
@@ -66,11 +71,30 @@ NSString * const LevelDsc[] = {
         NSString *outPutStr = [NSString stringWithFormat:@"\n[%@][%@ %@ LINE:%d] %@",levelStr,DATE,fileNameStr,line,context];
         
         fprintf(stdout,"%s\n",outPutStr.UTF8String);
-        if (level >= App_Current_Log_Level)
+        if (level >= tool.currentLogLevel)
         {
             [tool writeLog:outPutStr];
         }
     });
+}
+
+/**
+ 获取所有日志文件的绝对路径 并按照日期升序排序
+
+ @return 路径数组 string
+ */
++ (NSArray *)getAllAppLogFilePath
+{
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSDirectoryEnumerator *dirEnum = [fm enumeratorAtPath:LOG_DIRECTORY];
+    NSString *fileName;
+    NSMutableArray *filePaths = [NSMutableArray array];
+    while (fileName = [dirEnum nextObject]) {
+        [filePaths addObject:[LOG_DIRECTORY stringByAppendingPathComponent:fileName]];
+    }
+    return [filePaths sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
 }
 
 #pragma mark - instance method
@@ -84,10 +108,14 @@ NSString * const LevelDsc[] = {
 {
     if (self = [super init])
     {
-        self.logFilePath = [NSString stringWithFormat:@"%@/APP.log",LOG_DIRECTORY];
-        self.oldLogFilePath = [NSString stringWithFormat:@"%@/app_old.log",LOG_DIRECTORY];
+        NSFileManager *ma = [NSFileManager defaultManager];
+        BOOL isDirectory = YES;
+        if (![ma fileExistsAtPath:LOG_DIRECTORY isDirectory:&isDirectory]) {
+            [ma createDirectoryAtPath:LOG_DIRECTORY withIntermediateDirectories:YES attributes:nil error:nil];
+        }
+        
         self.fileManager = [NSFileManager defaultManager];
-        NSLog(@"logFilePath:%@",self.logFilePath);
+        NSLog(@"logFileDirectory:%@",LOG_DIRECTORY);
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(closeFile) name:UIApplicationWillTerminateNotification object:nil];
         [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(closeFile) name:UIApplicationDidEnterBackgroundNotification object:nil];
         self.syncNum = 0;
@@ -99,9 +127,6 @@ NSString * const LevelDsc[] = {
 {
     typeof(self) weakSelf = self;
     dispatch_barrier_async(self.queue, ^{
-//        NSData *data = [@"\n\n--------------- exit! --------------\n" dataUsingEncoding:NSUTF8StringEncoding];
-//        [weakSelf.fileHandle seekToEndOfFile];
-//        [weakSelf.fileHandle writeData:data];
         [weakSelf.fileHandle synchronizeFile];
         [weakSelf.fileHandle closeFile];
         weakSelf.fileHandle = nil;
@@ -122,43 +147,53 @@ NSString * const LevelDsc[] = {
     }
 }
 
+- (void)createLogFile
+{
+    [self closeFile];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyyMMdd_HHmmss"];
+    NSString *fileName = [[formatter stringFromDate:NSDate.date] stringByAppendingString:@".log"];
+    NSString *filePath = [NSString stringWithFormat:@"%@/%@",LOG_DIRECTORY,fileName];
+    if ([self.fileManager createFileAtPath:filePath contents:nil attributes:nil]) {
+        self.currentLogFilePath = filePath;
+        _fileHandle = nil;
+    }
+}
+
 /**
  检测日志文件
  创建日志文件、删除旧日志文件
  */
 - (void)CheckLocalLogFile
 {
-    //检查磁盘剩余空间
-//    NSDictionary *fattributes = [self.fileManager attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
-//    NSNumber *freeSize = [fattributes objectForKey:NSFileSystemFreeSize];
-//    if (freeSize.floatValue < 1000) {
-//        NSData *data = [@"\n磁盘剩余空间不足,无法写入日志!" dataUsingEncoding:NSUTF8StringEncoding];
-//        [self.fileHandle seekToEndOfFile];
-//        [self.fileHandle writeData:data];
-//        [self closeFile];
-//    }
+    NSArray *logFilePaths = [[MNLogManager getAllAppLogFilePath] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2 options:NSNumericSearch];
+    }];
     
-    //创建日志文件
-    if (![_fileManager fileExistsAtPath:self.logFilePath])
-    {
-        if ([_fileManager createFileAtPath:self.logFilePath contents:nil attributes:nil])
-        {
-            _fileHandle = nil;
-            return;
+    //获取当前日志文件
+    if (self.currentLogFilePath) {
+        if ([[self.fileManager attributesOfItemAtPath:self.currentLogFilePath error:nil] fileSize] >= LOG_FILE_SIZE * 1024 * 1024) {
+            [self createLogFile];
+        }
+    }else{
+        _fileHandle = nil;
+        if (logFilePaths.count == 0) {
+            [self createLogFile];
+        }else{
+            NSString *filePath = logFilePaths.lastObject;
+            if ([[self.fileManager attributesOfItemAtPath:filePath error:nil] fileSize] < LOG_FILE_SIZE * 1024 * 1024) {
+                self.currentLogFilePath = filePath;
+            }else{
+                [self createLogFile];
+            }
         }
     }
     
-    //检查log文件大小
-    if ([_fileManager attributesOfItemAtPath:self.logFilePath error:nil].fileSize >= LOG_FILE_MAX_SIZE * 1024 * 1024 * 0.5)
-    {
-        if ([_fileManager fileExistsAtPath:self.oldLogFilePath])
-        {
-            [_fileManager removeItemAtPath:self.oldLogFilePath error:nil];
-        }
-        [_fileManager copyItemAtPath:self.logFilePath toPath:self.oldLogFilePath error:nil];
-        [_fileManager removeItemAtPath:self.logFilePath error:nil];
-        
-        [self CheckLocalLogFile];
+    //删除太旧的日志文件
+    NSInteger count = (NSInteger)logFilePaths.count - LOG_FILE_MAX_COUNT;
+    for (int i=0; i<count; i++) {
+        NSString *filePath = logFilePaths[i];
+        [self.fileManager removeItemAtPath:filePath error:nil];
     }
 }
 
@@ -174,7 +209,7 @@ NSString * const LevelDsc[] = {
 {
     if (!_fileHandle)
     {
-        _fileHandle = [NSFileHandle fileHandleForWritingAtPath:self.logFilePath];
+        _fileHandle = [NSFileHandle fileHandleForWritingAtPath:self.currentLogFilePath];
     }
     return _fileHandle;
 }
@@ -186,6 +221,14 @@ NSString * const LevelDsc[] = {
         _dateFormatter.dateFormat = @"YYYY-MM-dd HH:mm:sssss";
     }
     return _dateFormatter;
+}
+- (MNLogLevel)currentLogLevel
+{
+    NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:@"AppLogLevel"];
+    if (num) {
+        return num.integerValue;
+    }
+    return _currentLogLevel;
 }
 
 @end

@@ -12,13 +12,13 @@ typedef NS_ENUM(NSUInteger, ConfigType) {
     ConfigTypeNone,
     ConfigTypeTextField,
     ConfigTypeLabel,
-    ConfigTypeSwitch
+    ConfigTypeSwitch,
+    ConfigTypeArrow
 };
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MNConfigModel : NSObject
-
 @property (nonatomic, strong) NSString *key;
 @property (nonatomic, strong) id value;
 @property (nonatomic, assign) ConfigType type;
