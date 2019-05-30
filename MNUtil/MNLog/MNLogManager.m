@@ -8,7 +8,7 @@
 
 #import "MNLogManager.h"
 #import <UIKit/UIKit.h>
-
+#import "MNDebugConfigConst.h"
 #define LOG_DIRECTORY [NSString stringWithFormat:@"%@/Documents/AppLog",NSHomeDirectory()]
 #define DATE [[MNLogManager shareInstance] getDate]
 
@@ -27,7 +27,7 @@ NSString * _Nullable const LevelDsc[] = {
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @property (nonatomic, strong) NSFileManager *fileManager;
 @property (nonatomic, strong) NSString *currentLogFilePath;
-
+@property (nonatomic, strong) NSDictionary *levelDic;
 @end
 
 @implementation MNLogManager
@@ -39,8 +39,15 @@ NSString * _Nullable const LevelDsc[] = {
     dispatch_once(&once,
                   ^() {
                       _instance = [[MNLogManager alloc] init];
+                      NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:AppLogLevel];
+                      _instance.currentLogLevel = num.unsignedIntegerValue;
                       _instance.queue = dispatch_queue_create("MNLogManager", DISPATCH_QUEUE_SERIAL);
-                      _instance.currentLogLevel = MNLogLevelError;
+                      _instance.levelDic = @{[NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelNone]:@"None",
+                                             [NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelDebug]:@"Debug",
+                                             [NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelInfo]:@"Info",
+                                             [NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelWarning]:@"Warning",
+                                             [NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelError]:@"Error"
+                                                                  };
                   });
     return _instance;
 }
@@ -222,6 +229,7 @@ NSString * _Nullable const LevelDsc[] = {
     }
     return _dateFormatter;
 }
+
 - (MNLogLevel)currentLogLevel
 {
     NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:@"AppLogLevel"];
@@ -229,6 +237,15 @@ NSString * _Nullable const LevelDsc[] = {
         return num.integerValue;
     }
     return _currentLogLevel;
+}
+
++ (NSArray *)logLevels
+{
+    NSMutableArray *arr = NSMutableArray.array;
+    for (int i=0; i<5; i++) {
+        [arr addObject:LevelDsc[i]];
+    }
+    return arr;
 }
 
 @end

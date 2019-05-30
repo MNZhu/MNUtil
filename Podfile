@@ -10,10 +10,11 @@ pod 'MJRefresh'
 #pod 'AsyncDisplayKit'
 pod 'UITableView+FDTemplateLayoutCell'
 pod 'FMDB'
-pod 'ReactiveCocoa'
+#pod 'ReactiveCocoa'
 #pod 'YYCategories'
 pod 'PLCrashReporter'
 pod 'Aspects'
 pod 'KSCrash'
+pod 'Colours'
 end
 

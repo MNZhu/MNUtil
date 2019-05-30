@@ -22,14 +22,15 @@
 		9500222D1FBADCC60013D4D1 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9500222C1FBADCC60013D4D1 /* BaseViewController.m */; };
 		958367201D8F8E0C005E5E9A /* MNUtilTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583671F1D8F8E0C005E5E9A /* MNUtilTests.m */; };
 		9583672B1D8F8E0C005E5E9A /* MNUtilUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */; };
-		97155B68224CCF2C00DE5AF1 /* BaseRsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 97155B67224CCF2C00DE5AF1 /* BaseRsp.m */; };
-		978A6682226EDF7400991326 /* MNConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A6681226EDF7400991326 /* MNConfigViewController.m */; };
-		978A6688226EFA6100991326 /* MNConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978A6687226EFA6100991326 /* MNConfigModel.m */; };
 		979A77CA226D981200276CC7 /* MNLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 979A77C9226D981200276CC7 /* MNLogManager.m */; };
+		979B9AED228C086200670902 /* MNDebugConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 979B9AE9228C086200670902 /* MNDebugConfigViewController.m */; };
+		979B9AEE228C086200670902 /* MNDebugConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 979B9AEC228C086200670902 /* MNDebugConfigModel.m */; };
+		979B9AFE228C092500670902 /* MNBaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 979B9AF9228C092500670902 /* MNBaseReq.m */; };
+		979B9AFF228C092500670902 /* MNNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 979B9AFB228C092500670902 /* MNNetwork.m */; };
+		979B9B00228C092500670902 /* MNBaseRsp.m in Sources */ = {isa = PBXBuildFile; fileRef = 979B9AFD228C092500670902 /* MNBaseRsp.m */; };
 		97AC08982277DEC6007E5980 /* MNAppLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC08972277DEC6007E5980 /* MNAppLogViewController.m */; };
 		97AC089E22782618007E5980 /* MNPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC089D22782618007E5980 /* MNPickerView.m */; };
-		97B8F02F226086250049C33B /* MNNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F02E226086250049C33B /* MNNetwork.m */; };
-		97B8F0322260875E0049C33B /* BaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 97B8F0312260875E0049C33B /* BaseReq.m */; };
+		97CFDC49227E6F390001E14C /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CFDC48227E6F390001E14C /* Test1ViewController.m */; };
 		97E826502265C8B400AFA48C /* viewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97E8264F2265C8B400AFA48C /* viewController.m */; };
 		97E826522265C8CD00AFA48C /* viewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E826512265C8CD00AFA48C /* viewController.storyboard */; };
 		A28B94E0B4361F8936DB3497 /* Pods_MNUtil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBE2B5ED206D27234CF28D8 /* Pods_MNUtil.framework */; };
@@ -90,23 +91,25 @@
 		9583672A1D8F8E0C005E5E9A /* MNUtilUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNUtilUITests.m; sourceTree = "<group>"; };
 		9583672C1D8F8E0D005E5E9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9594BF811E827BAF006D8A1C /* MNUtil-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MNUtil-Bridging-Header.h"; sourceTree = "<group>"; };
-		97155B66224CCF2C00DE5AF1 /* BaseRsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseRsp.h; sourceTree = "<group>"; };
-		97155B67224CCF2C00DE5AF1 /* BaseRsp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseRsp.m; sourceTree = "<group>"; };
-		978A6680226EDF7400991326 /* MNConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNConfigViewController.h; sourceTree = "<group>"; };
-		978A6681226EDF7400991326 /* MNConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNConfigViewController.m; sourceTree = "<group>"; };
-		978A6683226EE0B300991326 /* MNConfigConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNConfigConst.h; sourceTree = "<group>"; };
-		978A6686226EFA6100991326 /* MNConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNConfigModel.h; sourceTree = "<group>"; };
-		978A6687226EFA6100991326 /* MNConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNConfigModel.m; sourceTree = "<group>"; };
 		979A77C8226D981200276CC7 /* MNLogManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNLogManager.h; sourceTree = "<group>"; };
 		979A77C9226D981200276CC7 /* MNLogManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNLogManager.m; sourceTree = "<group>"; };
+		979B9AE8228C086200670902 /* MNDebugConfigModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDebugConfigModel.h; sourceTree = "<group>"; };
+		979B9AE9228C086200670902 /* MNDebugConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDebugConfigViewController.m; sourceTree = "<group>"; };
+		979B9AEA228C086200670902 /* MNDebugConfigConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDebugConfigConst.h; sourceTree = "<group>"; };
+		979B9AEB228C086200670902 /* MNDebugConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNDebugConfigViewController.h; sourceTree = "<group>"; };
+		979B9AEC228C086200670902 /* MNDebugConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNDebugConfigModel.m; sourceTree = "<group>"; };
+		979B9AF8228C092500670902 /* MNBaseRsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNBaseRsp.h; sourceTree = "<group>"; };
+		979B9AF9228C092500670902 /* MNBaseReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNBaseReq.m; sourceTree = "<group>"; };
+		979B9AFA228C092500670902 /* MNNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNNetwork.h; sourceTree = "<group>"; };
+		979B9AFB228C092500670902 /* MNNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNNetwork.m; sourceTree = "<group>"; };
+		979B9AFC228C092500670902 /* MNBaseReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNBaseReq.h; sourceTree = "<group>"; };
+		979B9AFD228C092500670902 /* MNBaseRsp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNBaseRsp.m; sourceTree = "<group>"; };
 		97AC08962277DEC6007E5980 /* MNAppLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNAppLogViewController.h; sourceTree = "<group>"; };
 		97AC08972277DEC6007E5980 /* MNAppLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNAppLogViewController.m; sourceTree = "<group>"; };
 		97AC089C22782618007E5980 /* MNPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNPickerView.h; sourceTree = "<group>"; };
 		97AC089D22782618007E5980 /* MNPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNPickerView.m; sourceTree = "<group>"; };
-		97B8F02D226086250049C33B /* MNNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MNNetwork.h; sourceTree = "<group>"; };
-		97B8F02E226086250049C33B /* MNNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MNNetwork.m; sourceTree = "<group>"; };
-		97B8F0302260875E0049C33B /* BaseReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseReq.h; sourceTree = "<group>"; };
-		97B8F0312260875E0049C33B /* BaseReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseReq.m; sourceTree = "<group>"; };
+		97CFDC47227E6F390001E14C /* Test1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1ViewController.h; sourceTree = "<group>"; };
+		97CFDC48227E6F390001E14C /* Test1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1ViewController.m; sourceTree = "<group>"; };
 		97E8264E2265C8B400AFA48C /* viewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = viewController.h; sourceTree = "<group>"; };
 		97E8264F2265C8B400AFA48C /* viewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = viewController.m; sourceTree = "<group>"; };
 		97E826512265C8CD00AFA48C /* viewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = viewController.storyboard; sourceTree = "<group>"; };
@@ -208,6 +211,8 @@
 				950021D01FBAD7440013D4D1 /* Info.plist */,
 				950021D11FBAD7440013D4D1 /* main.m */,
 				950021D31FBAD7440013D4D1 /* MNUtil.pch */,
+				97CFDC47227E6F390001E14C /* Test1ViewController.h */,
+				97CFDC48227E6F390001E14C /* Test1ViewController.m */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -264,9 +269,9 @@
 		958367041D8F8E0C005E5E9A /* MNUtil */ = {
 			isa = PBXGroup;
 			children = (
-				978A667F226EDF0D00991326 /* AppConfig */,
+				979B9AE0228C081400670902 /* DebugConfig */,
 				979A77C7226D97EE00276CC7 /* MNLog */,
-				97155B65224CCEE900DE5AF1 /* MNNetwork */,
+				979B9AF7228C092500670902 /* MNNetwork */,
 				950022211FBADC200013D4D1 /* BaseClass */,
 				950021BF1FBAD6BA0013D4D1 /* 第三方库 */,
 				954E859F1DDAAE9800BB575E /* 工具类 */,
@@ -293,31 +298,6 @@
 			path = MNUtilUITests;
 			sourceTree = "<group>";
 		};
-		97155B65224CCEE900DE5AF1 /* MNNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				97B8F0302260875E0049C33B /* BaseReq.h */,
-				97B8F0312260875E0049C33B /* BaseReq.m */,
-				97155B66224CCF2C00DE5AF1 /* BaseRsp.h */,
-				97155B67224CCF2C00DE5AF1 /* BaseRsp.m */,
-				97B8F02D226086250049C33B /* MNNetwork.h */,
-				97B8F02E226086250049C33B /* MNNetwork.m */,
-			);
-			path = MNNetwork;
-			sourceTree = "<group>";
-		};
-		978A667F226EDF0D00991326 /* AppConfig */ = {
-			isa = PBXGroup;
-			children = (
-				978A6680226EDF7400991326 /* MNConfigViewController.h */,
-				978A6681226EDF7400991326 /* MNConfigViewController.m */,
-				978A6683226EE0B300991326 /* MNConfigConst.h */,
-				978A6686226EFA6100991326 /* MNConfigModel.h */,
-				978A6687226EFA6100991326 /* MNConfigModel.m */,
-			);
-			path = AppConfig;
-			sourceTree = "<group>";
-		};
 		979A77C7226D97EE00276CC7 /* MNLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +309,32 @@
 				97AC089D22782618007E5980 /* MNPickerView.m */,
 			);
 			path = MNLog;
+			sourceTree = "<group>";
+		};
+		979B9AE0228C081400670902 /* DebugConfig */ = {
+			isa = PBXGroup;
+			children = (
+				979B9AEA228C086200670902 /* MNDebugConfigConst.h */,
+				979B9AE8228C086200670902 /* MNDebugConfigModel.h */,
+				979B9AEC228C086200670902 /* MNDebugConfigModel.m */,
+				979B9AEB228C086200670902 /* MNDebugConfigViewController.h */,
+				979B9AE9228C086200670902 /* MNDebugConfigViewController.m */,
+			);
+			path = DebugConfig;
+			sourceTree = "<group>";
+		};
+		979B9AF7228C092500670902 /* MNNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				979B9AF8228C092500670902 /* MNBaseRsp.h */,
+				979B9AF9228C092500670902 /* MNBaseReq.m */,
+				979B9AFA228C092500670902 /* MNNetwork.h */,
+				979B9AFB228C092500670902 /* MNNetwork.m */,
+				979B9AFC228C092500670902 /* MNBaseReq.h */,
+				979B9AFD228C092500670902 /* MNBaseRsp.m */,
+			);
+			name = MNNetwork;
+			path = ../../../test/SocialOPS/SocialOPS/Other/MNNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,15 +488,13 @@
 				"${PODS_ROOT}/Target Support Files/Pods-MNUtil/Pods-MNUtil-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/Colours/Colours.framework",
 				"${BUILT_PRODUCTS_DIR}/DateTools/DateTools.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 			);
@@ -498,15 +502,13 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Colours.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateTools.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 			);
@@ -540,26 +542,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97155B68224CCF2C00DE5AF1 /* BaseRsp.m in Sources */,
 				950021DC1FBAD7640013D4D1 /* LCNavigationController.m in Sources */,
 				97AC08982277DEC6007E5980 /* MNAppLogViewController.m in Sources */,
+				979B9AED228C086200670902 /* MNDebugConfigViewController.m in Sources */,
 				950021CB1FBAD6BA0013D4D1 /* XMGWaterflowLayout.m in Sources */,
 				9500222D1FBADCC60013D4D1 /* BaseViewController.m in Sources */,
 				97E826502265C8B400AFA48C /* viewController.m in Sources */,
-				978A6688226EFA6100991326 /* MNConfigModel.m in Sources */,
 				950021CA1FBAD6BA0013D4D1 /* NSArray+Log.m in Sources */,
 				950022241FBADC7C0013D4D1 /* BaseTabBarViewController.m in Sources */,
-				97B8F0322260875E0049C33B /* BaseReq.m in Sources */,
-				97B8F02F226086250049C33B /* MNNetwork.m in Sources */,
 				9500222A1FBADCB70013D4D1 /* BaseNavigationController.m in Sources */,
 				950022271FBADC990013D4D1 /* BaseNavigationBar.m in Sources */,
 				950021DB1FBAD7640013D4D1 /* MNUtil.m in Sources */,
-				978A6682226EDF7400991326 /* MNConfigViewController.m in Sources */,
+				979B9AEE228C086200670902 /* MNDebugConfigModel.m in Sources */,
 				950021C91FBAD6BA0013D4D1 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				950021D61FBAD7440013D4D1 /* main.m in Sources */,
+				979B9B00228C092500670902 /* MNBaseRsp.m in Sources */,
 				97AC089E22782618007E5980 /* MNPickerView.m in Sources */,
+				979B9AFE228C092500670902 /* MNBaseReq.m in Sources */,
+				97CFDC49227E6F390001E14C /* Test1ViewController.m in Sources */,
 				950021D41FBAD7440013D4D1 /* AppDelegate.mm in Sources */,
 				979A77CA226D981200276CC7 /* MNLogManager.m in Sources */,
+				979B9AFF228C092500670902 /* MNNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +720,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/Supporting Files/MNUtil.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MNUtil/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -739,7 +742,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MNUtil/Supporting Files/MNUtil.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MNUtil/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jn.com.MNUtil;
 				PRODUCT_NAME = "$(TARGET_NAME)";

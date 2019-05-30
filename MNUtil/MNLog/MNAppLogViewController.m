@@ -9,10 +9,7 @@
 #import "MNAppLogViewController.h"
 #import "MNLogManager.h"
 
-
 @interface MNAppLogViewController () <UITableViewDelegate, UITableViewDataSource, UIDocumentInteractionControllerDelegate>
-
-@property (nonatomic, weak) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *dataArr;
 
@@ -33,13 +30,7 @@
 - (void)initView
 {
     self.title = @"AppLog";
-    
-    UITableView *tableView = [[UITableView alloc] init];
-    tableView.rowHeight = 44;
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
-    tableView.frame = self.view.bounds;
+    self.tableView.rowHeight = 44;
 }
 
 #pragma mark UITableViewDelegate
@@ -57,10 +48,7 @@
         }
         [_documentController presentPreviewAnimated:YES];
     }
-//    MNAppLogDetailViewController *vc = [MNAppLogDetailViewController viewControllerWithFilePath:self.dataArr[indexPath.row]];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
-
 
 #pragma mark UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -80,7 +68,6 @@
     return cell;
 }
 
-
 #pragma mark lazy
 - (NSArray *)dataArr
 {
@@ -95,13 +82,11 @@
 }
 
 -(UIView *)documentInteractionControllerViewForPreview:(UIDocumentInteractionController *)controller{
-    NSLog(@"documentInteractionControllerDidEndPreview");
     return self.view;
 }
 
 - (CGRect)documentInteractionControllerRectForPreview:(UIDocumentInteractionController*)controller
 {
-    NSLog(@"documentInteractionControllerDidDismissOpenInMenu");
     return self.view.frame;
 }
 

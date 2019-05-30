@@ -79,7 +79,6 @@
     [cancelBtn setTitle:@"cancel" forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(removeSelf) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:cancelBtn];
-    
 }
 
 - (void)completeAction

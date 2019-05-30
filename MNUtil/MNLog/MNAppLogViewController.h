@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MNAppLogViewController : UIViewController
+@interface MNAppLogViewController : UITableViewController
 
 @end
 

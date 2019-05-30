@@ -15,6 +15,9 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - Colours (5.13.0):
+    - Colours/ObjC (= 5.13.0)
+  - Colours/ObjC (5.13.0)
   - DateTools (2.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -83,20 +86,16 @@ PODS:
   - KSCrash/Reporting/Tools (1.15.19):
     - KSCrash/Recording
   - Masonry (1.1.0)
-  - MJExtension (3.0.16)
-  - MJRefresh (3.1.16)
+  - MJExtension (3.0.17)
+  - MJRefresh (3.2.0)
   - PLCrashReporter (1.2.0)
-  - ReactiveCocoa (9.0.0):
-    - ReactiveSwift (~> 5.0)
-  - ReactiveSwift (5.0.1):
-    - Result (~> 4.1)
-  - Result (4.1.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYCache (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - Colours
   - DateTools
   - FMDB
   - KSCrash
@@ -104,7 +103,6 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - PLCrashReporter
-  - ReactiveCocoa
   - "UITableView+FDTemplateLayoutCell"
   - YYCache
 
@@ -112,6 +110,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Aspects
+    - Colours
     - DateTools
     - FMDB
     - KSCrash
@@ -119,28 +118,23 @@ SPEC REPOS:
     - MJExtension
     - MJRefresh
     - PLCrashReporter
-    - ReactiveCocoa
-    - ReactiveSwift
-    - Result
     - "UITableView+FDTemplateLayoutCell"
     - YYCache
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  Colours: f24220c38f13deac88612667e9b4a7fb96b871d4
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   KSCrash: 49855f7867f7d456905c241640a203f53588497d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 54dbbf6ee728f1a88e9aad904353d007831c7847
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   PLCrashReporter: 16927d86a093d0b9cf110545dacb77cb0ed0f243
-  ReactiveCocoa: 29709cf0cc7502ddd04a51220e10ee0336d8bec8
-  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 8963ffb1404da0a98c7b6fcb58159e933b25ea7b
+PODFILE CHECKSUM: f4b1ea8b8bbeb2771dcb5af9cfd137108be3e2a2
 
 COCOAPODS: 1.6.1

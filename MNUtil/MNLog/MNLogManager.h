@@ -52,6 +52,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)getLevelTypeString:(MNLogLevel)level;
 
++ (NSArray *)logLevels;
+
 @end
 
 NS_ASSUME_NONNULL_END

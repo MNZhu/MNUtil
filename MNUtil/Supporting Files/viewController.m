@@ -8,8 +8,11 @@
 
 #import "viewController.h"
 #import "MNLogManager.h"
-#import "MNConfigViewController.h"
+#import "MNDebugConfigViewController.h"
 #import "MNAppLogViewController.h"
+#import "Test1ViewController.h"
+#import "MNNetwork.h"
+#import <Colours.h>
 
 @interface viewController ()
 
@@ -19,25 +22,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    int i = 100;
-    while (i--) {
-        MNLOG_DEBUG(@"测试日志测测试日志测试日志测试日志测测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志测试日志");
-    }
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.view addSubview:btn];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn setTitle:@"下" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(next) forControlEvents:UIControlEventTouchUpInside];
+    
+    [UIColor colorFromHexString:@""];
+    
+    MNLOG_DEBUG(@"1111");
+}
+
+- (void)next
+{
+    Test1ViewController *vc = [Test1ViewController new];
+    UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:na animated:YES completion:nil];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
+    NSLog(@"%@",MNNETWORK.sessionManager.requestSerializer.HTTPRequestHeaders);
+    
+//    Test1ViewController *vc = [Test1ViewController new];
+//    UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:na animated:YES completion:nil];
+    
+    
 //    MNAppLogViewController *vc = [[MNAppLogViewController alloc] init];
 //    [self presentViewController:vc animated:YES completion:nil];
    
-    MNConfigViewController *vc = [[MNConfigViewController alloc] init];
+    MNDebugConfigViewController *vc = [[MNDebugConfigViewController alloc] init];
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    MNLOG_ERROR(@"测试日志测测试日志测试日");
-}
+//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+//    MNLOG_ERROR(@"测试日志测测试日志测试日");
+//}
 
 /*
 #pragma mark - Navigation
