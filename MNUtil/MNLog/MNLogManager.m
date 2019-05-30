@@ -8,7 +8,6 @@
 
 #import "MNLogManager.h"
 #import <UIKit/UIKit.h>
-#import "MNDebugConfigConst.h"
 #define LOG_DIRECTORY [NSString stringWithFormat:@"%@/Documents/AppLog",NSHomeDirectory()]
 #define DATE [[MNLogManager shareInstance] getDate]
 
@@ -39,7 +38,7 @@ NSString * _Nullable const LevelDsc[] = {
     dispatch_once(&once,
                   ^() {
                       _instance = [[MNLogManager alloc] init];
-                      NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:AppLogLevel];
+                      NSNumber *num = [NSUserDefaults.standardUserDefaults objectForKey:@"AppLogLevel"];
                       _instance.currentLogLevel = num.unsignedIntegerValue;
                       _instance.queue = dispatch_queue_create("MNLogManager", DISPATCH_QUEUE_SERIAL);
                       _instance.levelDic = @{[NSString stringWithFormat:@"%lu",(unsigned long)MNLogLevelNone]:@"None",
